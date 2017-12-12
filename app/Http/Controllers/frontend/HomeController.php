@@ -7,6 +7,14 @@ class HomeController extends Controller
 {
     function index() {
         // echo 'home';
+        
+//        $data['home'] = 'ini adalah home';
+        
         return \View::make('frontend.home.index');
     }
+    
+    function page_detail(){
+        return \View::make('frontend.home.detail');
+    }
+    
 }
