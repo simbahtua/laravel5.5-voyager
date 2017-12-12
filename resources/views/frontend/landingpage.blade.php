@@ -20,7 +20,7 @@
                                     </a>
                                 </li>
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/profil_anggota');?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="<?php echo url('/profile_anggota');?>" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon.png" class="menu-icon">
                                         <span>Profil Anggota KPU</span>
                                     </a>
