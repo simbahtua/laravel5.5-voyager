@@ -34,26 +34,40 @@
                         <div class="widget">
                             <div class="panel panel-default panel-theme panel-silver">
                                 <div class="panel-heading">
-                                    <h4 class="subtitle">Cek Data Pemilih Tetap</h4>
+                                    <h4 class="subtitle">Cek Data Pemilih Sementara</h4>
                                 </div>
-
+								
                                 <div class="panel-body">
-                                    <!--<form action="" method="post" name="frm_cek">-->
-                                    <form action="">
+                                	@if(Session::has('message'))
+									    <div class="alert alert-info">
+									      {{Session::get('message')}}
+									    </div>
+									@endif
+                                    {!! Form::open(['route'=>'cari']) !!}
                                         <div class="form-group">
-                                            <label for="inputserial1" class="col-sm-4 control-label">No.KTP Pemilih</label>
+                                        	{!! Form::label('PEMILU:','',['for' => "inputserial1", 'class' => "col-sm-4 control-label"]) !!}
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="serial" placeholder="masukkan nomor ktp pemilih...">
+                                        	{!! Form::select('idPemilu', $pemilu, null, array('class' => 'form-control')) !!}
+                                        	</div>
+
+                                        </div>
+                                        <div class="form-group {{ $errors->has('inpktp') ? 'has-error' : '' }}">
+                                            {!! Form::label('No.KTP Pemilih:','',['for' => "inputserial1", 'class' => "col-sm-4 control-label"]) !!}
+                                            <div class="col-sm-8">
+                                            {!! Form::number('inpktp', old('inpktp'), ['class'=>'form-control', 'placeholder'=>'Masukkan No. KTP ANDA']) !!}
+                                            
+                                            <span class="text-danger">{{ $errors->first('inpktp') }}</span>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <hr>
                                             <div class="col-sm-offset-4 col-sm-8">
-                                                <input id="button" name="cek" type="submit" value="Cek No KTP" class="btn btn-warning">
+                                                <button class="btn btn-success">CEK DPS </button>
                                             </div>
                                         </div>
-                                    </form>
+                                    {!! Form::close() !!}
+                                    
                                 </div>
                             </div>
                         </div>
