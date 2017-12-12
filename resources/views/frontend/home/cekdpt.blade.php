@@ -38,6 +38,7 @@
                                 </div>
 								
                                 <div class="panel-body">
+                                    @if(!empty($pemilu))
                                 	@if(Session::has('message'))
 									    <div class="alert alert-info">
 									      {{Session::get('message')}}
@@ -67,6 +68,13 @@
                                             </div>
                                         </div>
                                     {!! Form::close() !!}
+                                    
+                                    @else
+                                    	<div class="alert alert-info">
+                                    		Untuk Saat Ini Pengecekan DPS Belum dapat dilakukan 
+                                    	</div>
+                                    @endif
+
                                     
                                 </div>
                             </div>

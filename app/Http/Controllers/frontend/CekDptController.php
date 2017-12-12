@@ -13,9 +13,13 @@ class CekDptController extends Controller
         // echo 'home';
         $listPemilu = DataElection::orderBy('tahun','DESC')->orderBy('id', 'DESC')->get();
         
-        foreach ($listPemilu as $row) :
-            $listpemilu[$row->id] = $row->nama;
-        endforeach;
+
+        $listpemilu = array();
+        if(!empty($listPemilu)) {
+            foreach ($listPemilu as $row) :
+                $listpemilu[$row->id] = $row->nama;
+            endforeach;
+        }
 
         $data['pemilu'] = $listpemilu;
         return View('frontend.home.cekdpt', $data);
