@@ -74,9 +74,9 @@
                                     </a>
                                 </li>
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/cekdpt');?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="<?php echo url('/cekdps');?>" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon.png" class="menu-icon">
-                                        <span>Cek DPT</span>
+                                        <span>Cek DPS</span>
                                     </a>
                                 </li>
                             </ul>
