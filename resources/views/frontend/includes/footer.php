@@ -5,13 +5,13 @@
             <!-- <div class="topclick tips" title="" data-original-title="Back on TOP"><i class="fa fa-arrow-circle-up"></i></div> -->
             <div class="row">
                 <div class="col-md-1">
-                    <a href="./index.php" title="PEMERINTAH KABUPATEN BANTAENG" class="footer-logo">
+                    <a href="#" title="KOMISI PEMILIHAN UMUM KABUPATEN BANTAENG" class="footer-logo">
                         <img src="images/logo_wh.png" alt="Kab. BANTAENG">
                     </a>
                 </div>
 
                 <div class="col-md-11">
-                    <span class="footer-copy">Copyright &copy; 2017 PEMERINTAH KABUPATEN BANTAENG.</span>
+                    <span class="footer-copy">Copyright &copy; 2017 KOMISI PEMILIHAN UMUM KABUPATEN BANTAENG.</span>
                 </div>
             </div>
 

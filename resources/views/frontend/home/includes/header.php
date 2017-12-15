@@ -8,7 +8,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>Pemerintah Kabupaten Bantaeng</title>
+    <title>Komisi Pemilihan Umum Kabupaten Bantaeng</title>
 
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,7 +18,6 @@
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta name="author" content="Air Amanah IT"/>
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->          
     <link href="web/css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -71,9 +70,9 @@
                             </button>
                             <div class="navbar-brand">
                                 <a href="#" class="logo" alt="logo">
-                                    <img src="web/images/logo.png" alt="Pemerintah Kabupaten Bantaeng">
+                                    <img src="web/images/logo.png" alt="Komisi Pemilihan Umum Kabupaten Bantaeng">
                                 </a>
-                                <h1 class="navbar-brand-text">Pemerintah Kabupaten Bantaeng</h1>
+                                <h1 class="navbar-brand-text">Komisi Pemilihan Umum Kabupaten Bantaeng</h1>
                             </div>
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,29 +91,22 @@
                                 <ul class="nav navbar-nav navbar-left">
                                     <li class="active"><a href="#">Beranda</a></li>
                                     <li class="dropdown">
-                                        <a href="#">Sekilas Kab. Bantaeng</a>
+                                        <a href="#">Informasi KPU</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Sejarah Kab. Bantaeng</a></li>
-                                            <li><a href="#">Tri Bina Cita</a></li>
-                                            <li><a href="#">Visi dan Misi</a></li>
-                                            <li><a href="#">Program Pembangunan</a></li>
-                                            <li><a href="#">Makna Lambang</a></li>
-                                            <li><a href="#">Geografis</a></li>
-                                            <li><a href="#">Mantan Walikota</a></li>
-                                            <li><a href="#">Sambutan Walikota</a></li>
+                                            <li><a href="#">Sejarah Pemilu</a></li>
+                                            <li><a href="#">Visi Misi</a></li>
+                                            <li><a href="#">Produk Hukum</a></li>
+                                            <li><a href="#">Pemilu Pilkada</a></li>
+                                            
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="#">Layanan Publik</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Kependudukan dan Pencatatan Sipil</a></li>
-                                            <li><a href="#">Kesehatan</a></li>
-                                            <li><a href="#">Ketenagakerjaan dan Sosial</a></li>
-                                            <li><a href="#">Perpustakaan</a></li>
-                                            <li><a href="#">Permohonan Informasi Publik</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sambat Online</a></li>
+                                    <li><a href="#">Profile Anggota</a></li>
+                                    <li><a href="#">Berita</a></li>
+                                    <li><a href="#">Pengumuman</a></li>
+                                    <li><a href="#">Agenda</a></li>
+                                    <li><a href="#">Dokumen</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Cek Data Pemilih</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div>

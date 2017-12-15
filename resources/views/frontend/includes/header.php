@@ -8,7 +8,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>Pemerintah Kabupaten Bantaeng</title>
+    <title>Komisi Pemilihan Umum Kabupaten Bantaeng</title>
 
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -53,9 +53,9 @@
                         <div class="navbar-header">
                             <div class="navbar-brand">
                                 <a href="#" class="logo" alt="logo">
-                                    <img src="images/logo.png" alt="Pemerintah Kabupaten Bantaeng">
+                                    <img src="images/logo.png" alt="Komisi Pemilihan Umum Kabupaten Bantaeng">
                                 </a>
-                                <h1 class="navbar-brand-text">Pemerintah <strong>Kabupaten Bantaeng</strong></h1>
+                                <h1 class="navbar-brand-text">Komisi Pemilihan Umum<strong>Kabupaten Bantaeng</strong></h1>
                             </div>
                         </div>
                     </nav>
