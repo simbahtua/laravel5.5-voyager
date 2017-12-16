@@ -110,8 +110,8 @@
             <!-- <div class="topclick tips" title="" data-original-title="Back on TOP"><i class="fa fa-arrow-circle-up"></i></div> -->
             <div class="row">
                 <div class="col-md-4">
-                    <a href="./index.php" title="KOMISI PEMILIHAN UMUM KABUPATEN BANTAENG" class="footer-logo">
-                        <img src="web/images/logo_wh.png" alt="Kab. BANTAENG">
+                    <a href="#" title="KOMISI PEMILIHAN UMUM KABUPATEN BANTAENG" class="footer-logo">
+                        <img src="<?php echo e(asset('web/images/logo_wh.png')); ?>" alt="Kab. BANTAENG">
                     </a>
                 </div>
 
@@ -131,7 +131,7 @@
                         <li><i class="icon-twitter"></i> Twitter: <a href="#" target="_blank">@kabbantaeng</a></li>
                         <li><i class="icon-youtube"></i> Youtube: <a href="#" target="_blank">Mediacenter Kabupaten Bantaeng</a></li>
                     </ul>
-                    <span class="footer-copy">Copyright &copy; 2017 KOMISI PEMILIHAN UMUM KABUPATEN BANTAENG.</span>
+                    <span class="footer-copy">Copyright &copy; 2017 KOMISI PEMILIHAN UMUM KABUPATEN BANTAENG</span>
                 </div>
             </div>
 
@@ -139,17 +139,16 @@
     </div>
 </footer>
 <!-- /Footer -->
-
-<script type="text/javascript" src="web/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="web/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="web/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="web/js/prettyphoto/jquery.prettyPhoto.js" charset="utf-8"></script>
-<script type="text/javascript" src="web/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="web/js/jquery-events-frame.js"></script>
-<script type="text/javascript" src="web/js/jparallax.js"></script>
-<script type="text/javascript" src="web/js/jquery.slimscroll.min.js"></script>
-
-<script type="text/javascript" src="web/js/application.js"></script>  
+<?php echo e(asset('web/js/jquery.easing.1.3.js')); ?>
+<script type="text/javascript" src="<?php echo e(asset('web/js/jquery-migrate-1.2.1.min.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/bootstrap.min.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/jquery.easing.1.3.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/prettyphoto/jquery.prettyPhoto.js')); ?>" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/jquery.bxslider.min.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/jquery-events-frame.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/jparallax.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/jquery.slimscroll.min.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('web/js/application.js')); ?>"></script>  
 
 
 </body>

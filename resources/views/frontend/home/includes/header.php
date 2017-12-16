@@ -97,17 +97,23 @@
                                             <li><a href="#">Visi Misi</a></li>
                                             <li><a href="#">Produk Hukum</a></li>
                                             <li><a href="#">Pemilu Pilkada</a></li>
-                                            
+
                                         </ul>
                                     </li>
                                     <li><a href="#">Profile Anggota</a></li>
-                                    <li><a href="#">Berita</a></li>
-                                    <li><a href="#">Pengumuman</a></li>
-                                    <li><a href="#">Agenda</a></li>
-                                    <li><a href="#">Dokumen</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Informasi Web</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Berita</a></li>
+                                            <li><a href="#">Pengumuman</a></li>
+                                            <li><a href="#">Agenda</a></li>
+                                            <li><a href="#">Dokumen</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="#">Gallery</a></li>
                                     <li><a href="#">Cek Data Pemilih</a></li>
                                 </ul>
+                                
                             </div><!-- /.navbar-collapse -->
                         </div>
                     </nav>

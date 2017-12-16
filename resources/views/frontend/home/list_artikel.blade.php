@@ -1,13 +1,11 @@
 @extends('frontend.home.app')
 @section('content')
 <div class="page_header_wrap" style="background: url(<?php echo e(asset('web/images/bg-header.jpg')); ?>) center -25px no-repeat">
-        <div class="container">
-            <h2 class="page_category">{{ $page_title }}</h2>
-        </div>
-    </div>   
+    <div class="container">
+        <h2 class="page_category">{{ $page_title }}</h2>
+    </div>
+</div>   
 <div class="container">
-
-
     <div class="panel panel-default panel-content">
         <div class="panel-heading">
             <ol class="breadcrumb">
@@ -32,15 +30,15 @@
                                 @php
                                 $text = substr($row->body, 0, 350);
                                 $date = $row->created_at;
-                                $tahun = substr($date, 0, 4);
+                                $hari = 
                                 $bulan = substr($date, 5, 2);
-                                $tanggal = substr($date, 8, 2);    
+                                $tanggal = date('d F Y', strtotime($date));    
                                 @endphp
                                 <li>
                                     <div class="list-head">
                                         <div class="list-post-date">
                                             <strong>Selasa</strong>
-                                            {{ $tanggal }} - {{ $bulan }} - {{ $tahun }}
+                                            {{ $tanggal }}
                                         </div>
                                         <div class="list-post-title">
                                             <h3><a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM">{{ $row->title }}</a></h3>
@@ -53,18 +51,18 @@
                                     </div>
                                     <div class="list-content">
                                         <div class="list-post-img">
-                                            <a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM" class="loop-entry-thumbnail"><img src="<?php echo e(asset('storage/')); ?>/{{$row->image}}" alt="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM"></a>
+                                            <a href="#" title="{{ $row->title }}" class="loop-entry-thumbnail"><img src="<?php echo e(asset('storage/')); ?>/{{$row->image}}" alt="{{ $row->title }}"></a>
                                         </div>
                                         <div class="list-post-data">
                                             <p>{{ strip_tags($text) }}...</p>
-                                            <p><a href="{{route('detail_berita', [$row->id])}}" title="Baca Selengkapnya : Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM" class="btn btn-default btn-sm">Selengkapnya</a></p>
+                                            <p><a href="{{route('detail_artikel', [$row->id])}}" title="Baca Selengkapnya : {{ $row->title }}" class="btn btn-default btn-sm">Selengkapnya</a></p>
                                         </div>
                                     </div>
                                 </li>
                                 @endforeach
                                 @else 
                                 <div class="alert alert-info">
-                                    Data Berita Belum Ada 
+                                    Data Artikel Belum Ada 
                                 </div>
                                 @endif
                             </ul>

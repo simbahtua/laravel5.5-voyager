@@ -23,7 +23,20 @@ Route::get('cekdps',['as' => 'cekdps', 'uses' => 'frontend\CekDptController@inde
 Route::get('sejarahkpu','frontend\SejarahkpuController@index');
 Route::get('kontak','frontend\KontakController@index');
 Route::get('dokumen','frontend\DokumenController@index');
+
 Route::get('list_berita','frontend\BeritaController@index');
+Route::get('/detail_berita/{id}', [
+  'uses' => 'frontend\BeritaController@detail',
+  'as'   => 'detail_berita'
+]);
+
+Route::get('list_artikel','frontend\ArtikelController@index');
+Route::get('/detail_artikel/{id}', [
+  'uses' => 'frontend\ArtikelController@detail',
+  'as'   => 'detail_artikel'
+]);
+
+
 Route::get('hukum','frontend\HukumController@index');
 Route::get('list_pengumuman','frontend\PengumumanController@index');
 Route::get('profile_anggota','frontend\ProfileAnggotaController@index');

@@ -20,20 +20,20 @@
     <meta name="keywords" content="" />
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->          
-    <link href="web/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('web/css/bootstrap.css')); ?>" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN THEME STYLES --> 
-    <link href="web/css/imports.css" rel="stylesheet" type="text/css"/>
-    <link href="web/css/custom.css" rel="stylesheet" type="text/css"/>
-    <link href="web/css/responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('web/css/imports.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('web/css/custom.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('web/css/responsive.css')); ?>" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
 
     <!-- JQUERY LIBRARY -->
-    <script type='text/javascript' src="web/js/jquery.min.js"></script>
+    <script type='text/javascript' src="<?php echo e(asset('web/js/jquery.min.js')); ?>"></script>
     <!-- JQUERY LIBRARY -->
 
-    <link rel="shortcut icon" href="web/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo e(asset('web/images/favicon.ico')); ?>" />
 </head>
 <!-- END HEAD -->
 
@@ -70,7 +70,7 @@
                             </button>
                             <div class="navbar-brand">
                                 <a href="#" class="logo" alt="logo">
-                                    <img src="web/images/logo.png" alt="Komisi Pemilihan Umum Kabupaten Bantaeng">
+                                    <img src="<?php echo e(asset('web/images/logo.png')); ?>" alt="Komisi Pemilihan Umum Kabupaten Bantaeng">
                                 </a>
                                 <h1 class="navbar-brand-text">Komisi Pemilihan Umum Kabupaten Bantaeng</h1>
                             </div>
@@ -91,30 +91,29 @@
                                 <ul class="nav navbar-nav navbar-left">
                                     <li class="active"><a href="#">Beranda</a></li>
                                     <li class="dropdown">
-                                        <a href="#">Sekilas Kab. Bantaeng</a>
+                                        <a href="#">Informasi KPU</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Sejarah Kab. Bantaeng</a></li>
-                                            <li><a href="#">Tri Bina Cita</a></li>
-                                            <li><a href="#">Visi dan Misi</a></li>
-                                            <li><a href="#">Program Pembangunan</a></li>
-                                            <li><a href="#">Makna Lambang</a></li>
-                                            <li><a href="#">Geografis</a></li>
-                                            <li><a href="#">Mantan Walikota</a></li>
-                                            <li><a href="#">Sambutan Walikota</a></li>
+                                            <li><a href="#">Sejarah Pemilu</a></li>
+                                            <li><a href="#">Visi Misi</a></li>
+                                            <li><a href="#">Produk Hukum</a></li>
+                                            <li><a href="#">Pemilu Pilkada</a></li>
+                                            
                                         </ul>
                                     </li>
+                                    <li><a href="#">Profile Anggota</a></li>
                                     <li class="dropdown">
-                                        <a href="#">Layanan Publik</a>
+                                        <a href="#">Informasi Web</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Kependudukan dan Pencatatan Sipil</a></li>
-                                            <li><a href="#">Kesehatan</a></li>
-                                            <li><a href="#">Ketenagakerjaan dan Sosial</a></li>
-                                            <li><a href="#">Perpustakaan</a></li>
-                                            <li><a href="#">Permohonan Informasi Publik</a></li>
+                                            <li><a href="#">Berita</a></li>
+                                            <li><a href="#">Pengumuman</a></li>
+                                            <li><a href="#">Agenda</a></li>
+                                            <li><a href="#">Dokumen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Sambat Online</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Cek Data Pemilih</a></li>
                                 </ul>
+                                
                             </div><!-- /.navbar-collapse -->
                         </div>
                     </nav>
@@ -125,11 +124,5 @@
     </header>
     <!-- /Header -->
 
-    <!-- page title -->
-    <div class="page_header_wrap" style="background: url(web/images/bg-header.jpg) center -25px no-repeat">
-        <div class="container">
-            <h2 class="page_category">Berita</h2>
-        </div>
-    </div>   
-    <!-- page title -->
+   
 
