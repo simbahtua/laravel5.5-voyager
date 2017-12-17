@@ -1,10 +1,10 @@
 @extends('frontend.home.app')
 @section('content')
 <div class="page_header_wrap" style="background: url(<?php echo e(asset('web/images/bg-header.jpg')); ?>) center -25px no-repeat">
-        <div class="container">
-            <h2 class="page_category">{{ $page_title }}</h2>
-        </div>
-    </div>   
+    <div class="container">
+        <h2 class="page_category">{{ $page_title }}</h2>
+    </div>
+</div>   
 <div class="container">
 
 
@@ -29,18 +29,17 @@
                             <ul>                                
                                 @if(!empty($data))
                                 @foreach ($data as $row)
-                                @php
-                                $text = substr($row->body, 0, 350);
-                                $date = $row->created_at;
-                                $tahun = substr($date, 0, 4);
-                                $bulan = substr($date, 5, 2);
-                                $tanggal = substr($date, 8, 2);    
-                                @endphp
+                                    @php
+                                        $text = substr($row->body, 0, 350);
+                                        $date = $row->created_at;
+                                        $hari = date('l', strtotime($date)); 
+                                        $tanggal = date('d M Y', strtotime($date));  
+                                    @endphp
                                 <li>
                                     <div class="list-head">
                                         <div class="list-post-date">
-                                            <strong>Selasa</strong>
-                                            {{ $tanggal }} - {{ $bulan }} - {{ $tahun }}
+                                            <strong>{{ $hari }}</strong>
+                                            {{ $tanggal }} 
                                         </div>
                                         <div class="list-post-title">
                                             <h3><a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM">{{ $row->title }}</a></h3>

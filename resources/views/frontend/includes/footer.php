@@ -31,14 +31,14 @@
         </li>
 
         <li>
-            <a href="#" title="Kontak">
+            <a href="<?php echo url('/kontak'); ?>" title="Kontak">
                 <img src="uploads/menu/icon-contact.png" class="menu-icon">
                 <span>Kontak</span>
             </a>
         </li>
 
         <li>
-            <a href="#" title="Dumas">
+            <a href="http://www.kpu.go.id/index.php/pages/detail/2008/11/Pemilu-1999" target="_blank" title="Dumas">
                 <img src="uploads/menu/icon-dumas.png" class="menu-icon">
                 <span>Dumas</span>
             </a>

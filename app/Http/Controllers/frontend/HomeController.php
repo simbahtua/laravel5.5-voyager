@@ -47,6 +47,16 @@ class HomeController extends Controller
                 ->inRandomOrder()
                 ->get();
         
+        //Pengumuman
+        $data ['pengumuman'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('category_id', '3')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->orderBy('id', 'desc')
+                ->get();
+        
         return \View::make('frontend.home.index',$data);
     }
     

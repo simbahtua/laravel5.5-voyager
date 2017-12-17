@@ -192,34 +192,26 @@
                         </div>
                         <div class="panel-body">
                             <ul class="list-info">
+                                @if(!empty($pengumuman))
+                                @foreach ($pengumuman as $row_pengumuman)
+                                @php
+                                $date = $row_pengumuman->created_at;
+                                $tanggal = date('l , d M Y', strtotime($date));
+                                @endphp
                                 <li>
-                                    <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                    <span class="meta">Selasa, 5 Desember 2017 5:00</span>
+                                    <a href="{{route('detail_pengumuman', [$row_pengumuman->id])}}" class="headline-title" title="{{ $row_pengumuman->title }}">{{ $row_pengumuman->title }}</a>
+                                    <span class="meta">{{ $tanggal }}</span>
                                 </li>
-
-                                <li>
-                                    <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                    <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                    <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                    <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                    <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                </li>
+                            @endforeach
+                            @else 
+                            <div class="alert alert-info">
+                                Data Pengumuman Belum Ada 
+                            </div>
+                            @endif
                             </ul>
                         </div>
                         <div class="panel-footer">
-                            <a href="#" class="more-link">Pengumuman Selengkapnya &nbsp;&raquo;</a>
+                            <a href="<?php echo url('/list_pengumuman'); ?>" class="more-link">Pengumuman Selengkapnya &nbsp;&raquo;</a>
                         </div>
                     </div>
                 </div>

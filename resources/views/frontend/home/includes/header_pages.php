@@ -75,7 +75,6 @@
                                 <h1 class="navbar-brand-text">Komisi Pemilihan Umum Kabupaten Bantaeng</h1>
                             </div>
 
-                            <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="navbar-collapse">
                                 <div class="top-info">
                                     <ul class="topmenu">
@@ -89,29 +88,29 @@
                                 </div>
 
                                 <ul class="nav navbar-nav navbar-left">
-                                    <li class="active"><a href="#">Beranda</a></li>
+                                    <li class="active"><a href="<?php echo url('/home'); ?>">Beranda</a></li>
                                     <li class="dropdown">
                                         <a href="#">Informasi KPU</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Sejarah Pemilu</a></li>
-                                            <li><a href="#">Visi Misi</a></li>
-                                            <li><a href="#">Produk Hukum</a></li>
+                                            <li><a href="<?php echo url('/sejarahkpu'); ?>">Sejarah Pemilu</a></li>
+                                            <li><a href="<?php echo url('/visi_misi'); ?>">Visi Misi</a></li>
+                                            <li><a href="http://jdih.kpu.go.id/">Produk Hukum</a></li>
                                             <li><a href="#">Pemilu Pilkada</a></li>
-                                            
+
                                         </ul>
                                     </li>
-                                    <li><a href="#">Profile Anggota</a></li>
+                                    <li><a href="#">Profil Anggota</a></li>
                                     <li class="dropdown">
                                         <a href="#">Informasi Web</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Berita</a></li>
-                                            <li><a href="#">Pengumuman</a></li>
-                                            <li><a href="#">Agenda</a></li>
-                                            <li><a href="#">Dokumen</a></li>
+                                            <li><a href="<?php echo url('/list_berita'); ?>">Berita</a></li>
+                                            <li><a href="<?php echo url('/list_pengumuman'); ?>">Pengumuman</a></li>
+                                            <li><a href="<?php echo url('/list_agenda'); ?>">Agenda</a></li>
+                                            <li><a href="<?php echo url('/list_dokumen'); ?>">Dokumen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">Cek Data Pemilih</a></li>
+                                    <li><a href="<?php echo url('/list_gallery'); ?>">Gallery</a></li>
+                                    <li><a href="<?php echo url('/cekdps'); ?>">Cek Data Pemilih</a></li>
                                 </ul>
                                 
                             </div><!-- /.navbar-collapse -->

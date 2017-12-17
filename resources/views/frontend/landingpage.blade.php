@@ -41,7 +41,7 @@
                                 </li>
 
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/hukum'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="http://jdih.kpu.go.id/" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-hukum.png" class="menu-icon">
                                         <span>Hukum</span>
                                     </a>

@@ -26,18 +26,17 @@
                         <div class="post-list">
                             <ul>                                
                                 @if(!empty($data))
-                                @foreach ($data as $row)
-                                @php
-                                $text = substr($row->body, 0, 350);
-                                $date = $row->created_at;
-                                $hari = 
-                                $bulan = substr($date, 5, 2);
-                                $tanggal = date('d F Y', strtotime($date));    
-                                @endphp
+                                    @foreach ($data as $row)
+                                        @php
+                                            $text = substr($row->body, 0, 350);
+                                            $date = $row->created_at;
+                                            $hari = date('l', strtotime($date)); 
+                                            $tanggal = date('d M Y', strtotime($date));    
+                                         @endphp
                                 <li>
                                     <div class="list-head">
                                         <div class="list-post-date">
-                                            <strong>Selasa</strong>
+                                            <strong>{{ $hari }}</strong>
                                             {{ $tanggal }}
                                         </div>
                                         <div class="list-post-title">
@@ -59,12 +58,12 @@
                                         </div>
                                     </div>
                                 </li>
-                                @endforeach
-                                @else 
+                                    @endforeach
+                                        @else 
                                 <div class="alert alert-info">
                                     Data Artikel Belum Ada 
                                 </div>
-                                @endif
+                                         @endif
                             </ul>
 
                             <ul class="pagination">
@@ -83,7 +82,7 @@
                 <div class="col-md-4" id="side">
                     <div class="panel panel-default panel-theme">
                         <div class="panel-heading">
-                            <h2>Berita Lainnya</h2>
+                            <h2>Artikel Lainnya</h2>
                         </div>
                         <div class="panel-body">
                             <ul class="sidebar-list">
