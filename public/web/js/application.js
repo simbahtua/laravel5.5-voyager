@@ -51,6 +51,7 @@ $(document).ready(function() {
 	seclinkSlide();
 	SetHArticles();
 	SetHlpse();
+	SetHGallery();
 });
 
 function mainSlider(){
@@ -135,4 +136,24 @@ function SetHlpse() {
 	$('#widget-lpse .panel-body .col-md-6 > .lpse-wrap > .lpse-mid > .fa').animate({
 		fontSize: "5em"
 	}, 1500);
+}
+
+function SetHGallery() {
+	var listg_h = new Array();
+	var tempg = 0;
+	var maxg_h;
+
+	$.each($('#block-gallery > .gallery_cover > li'), function (index, value) {
+		$(this).map(function() {
+			listg_h.push($(this).height());
+		});
+	});
+
+	for (var i = 0; i < listg_h.length; i++) {
+		if(tempg < listg_h[i]) {
+			tempg = listg_h[i];
+		}
+	}
+
+	$('#block-gallery > .gallery_cover > li').height(tempg);
 }
