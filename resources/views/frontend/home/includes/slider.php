@@ -8,6 +8,7 @@
 					<ul class="main-bxslider">
 						<li><img src="web/uploads/slide/slider_01.jpg" alt="Pemerintah Kabupaten Bantaen"></li>
 						<li><img src="web/uploads/slide/slider_02.jpg" alt="Pemerintah Kabupaten Bantaen"></li>
+						<li><img src="web/uploads/slide/slider_03.jpg" alt="Pemerintah Kabupaten Bantaen"></li>
 					</ul>
 				</div>
 			</div>
