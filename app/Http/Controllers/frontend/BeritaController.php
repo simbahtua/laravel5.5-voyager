@@ -14,7 +14,6 @@ class BeritaController extends Controller {
         $data ['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-//                ->join('*')
                 ->where('category_id', '2')
                 ->where('STATUS', 'PUBLISHED')
                 ->get();
