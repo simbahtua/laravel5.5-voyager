@@ -36,6 +36,11 @@ Route::get('/detail_artikel/{id}', [
   'as'   => 'detail_artikel'
 ]);
 
+Route::get('/detail_pengumuman/{id}', [
+  'uses' => 'frontend\PengumumanController@detail',
+  'as'   => 'detail_pengumuman'
+]);
+
 
 Route::get('hukum','frontend\HukumController@index');
 Route::get('list_pengumuman','frontend\PengumumanController@index');
