@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 	mainSlider();
 	autoPlayChannel();
+	floating_menu();
 
 });
 
@@ -49,5 +50,21 @@ function autoPlayChannel() {
 				indexli.find("iframe").attr("src", videoSRCauto);
 			}
 		});
+	});
+}
+
+function floating_menu(){
+	var setFloat	= $('#widget_shortcut');
+	var offset 		= $('#main-slider').height();
+
+	$(window).on('scroll',function() {
+		var scroll 	= $(window).scrollTop();
+		if (scroll > offset-30) {
+			if(setFloat.attr('class')!=='show') {
+				setFloat.addClass('show');
+			}
+		} else {
+			setFloat.removeClass('show');
+		}
 	});
 }
