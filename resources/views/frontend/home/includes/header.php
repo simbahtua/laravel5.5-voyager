@@ -100,7 +100,7 @@
 
                                         </ul>
                                     </li>
-                                    <li><a href="#">Profile Anggota</a></li>
+                                    <li><a href="#">Profil Anggota</a></li>
                                     <li class="dropdown">
                                         <a href="#">Informasi Web</a>
                                         <ul class="sub-menu">

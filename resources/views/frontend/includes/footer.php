@@ -20,6 +20,34 @@
 </footer>
 <!-- /Footer -->
 
+<!-- float shortcut -->
+<div id="widget_shortcut">
+    <ul>
+        <li>
+            <a href="#" title="PPID">
+                <img src="uploads/menu/icon-ppid.png" class="menu-icon">
+                <span>PPID</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" title="Kontak">
+                <img src="uploads/menu/icon-contact.png" class="menu-icon">
+                <span>Kontak</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" title="Dumas">
+                <img src="uploads/menu/icon-dumas.png" class="menu-icon">
+                <span>Dumas</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- float shortcut -->
+
+
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>

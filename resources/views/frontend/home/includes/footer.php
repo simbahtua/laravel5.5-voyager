@@ -4,99 +4,57 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="footer-menu">                     
-                        <h4 class="title">PEMERINTAHAN</h4>
+                        <h4 class="title">Beranda</h4>
                         <ul>
-                            <li> <a title="Link Title" href="#">Badan dan Kantor</a> </li>
-                            <li> <a title="Link Title" href="#">Bagian</a> </li>
-                            <li> <a title="Link Title" href="#">Daftar Eksekutif</a> </li>
-                            <li> <a title="Link Title" href="#">Daftar Legislatif</a> </li>
-                            <li> <a title="Link Title" href="#">Daftar Forkopimda</a> </li>
-                            <li> <a title="Link Title" href="#">Dinas</a> </li>
-                            <li> <a title="Link Title" href="#">Kecamatan dan Kelurahan</a> </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-menu">
-                        <h4 class="title">DOKUMEN DAERAH</h4>
-                        <ul>
-                            <li> <a title="Link Title" href="#">Kabupaten Bantaeng</a> </li>
-                            <li> <a title="Link Title" href="#">APBD</a> </li>
-                            <li> <a title="Link Title" href="#">LAKIP</a> </li>
-                            <li> <a title="Link Title" href="#">Peraturan Daerah</a> </li>
-                            <li> <a title="Link Title" href="#">Peraturan Walikota</a> </li>
-                            <li> <a title="Link Title" href="#">Rencana Pembangunan Daerah</a> </li>
-                            <li> <a title="Link Title" href="#">Daftar informasi Publik</a> </li>
-                            <li> <a title="Link Title" href="#">SAKIP Kota Bantaeng</a> </li>
+                            <li> <a title="Link Title" href="#">Beranda</a> </li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="footer-menu">                     
-                        <h4 class="title">LAYANAN PUBLIK</h4>
+                        <h4 class="title">Informasi KPU</h4>
                         <ul>
-                            <li> <a title="Link Title" href="#">Perpustakaan</a> </li>
-                            <li> <a title="Link Title" href="#">Kependudukan dan Pencatatan Sipil</a> </li>
-                            <li> <a title="Link Title" href="#">Kesehatan</a> </li>
-                            <li> <a title="Link Title" href="#">Ketenagakerjaan dan Sosial</a> </li>
-                            <li> <a title="Link Title" href="#">Permohonan Informasi Publik</a> </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-menu">
-                        <h4 class="title">TRANSPARANSI PENGELOLAAN ANGGARAN DAERAH</h4>
-                        <ul>
-                            <li> <a title="Link Title" href="#">APBD</a> </li>
-                            <li> <a title="Link Title" href="#">DPA</a> </li>
-                            <li> <a title="Link Title" href="#">RKA</a> </li>
-                            <li> <a title="Link Title" href="#">Realisasi APBD</a> </li>
+                            <li><a href="#">Sejarah Pemilu</a></li>
+                            <li><a href="#">Visi Misi</a></li>
+                            <li><a href="#">Produk Hukum</a></li>
+                            <li><a href="#">Pemilu Pilkada</a></li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="footer-menu">
-                        <h4 class="title">FASILITAS DAERAH</h4>
+                        <h4 class="title">Informasi Web</h4>
                         <ul>
-                            <li> <a title="Link Title" href="#">Pendidikan</a> </li>
-                            <li> <a title="Link Title" href="#">Apotek</a> </li>
-                            <li> <a title="Link Title" href="#">Bank</a> </li>
-                            <li> <a title="Link Title" href="#">Bioskop</a> </li>
-                            <li> <a title="Link Title" href="#">Kesenian</a> </li>
-                            <li> <a title="Link Title" href="#">Pusat Perbelanjaan</a> </li>
-                            <li> <a title="Link Title" href="#">Real Estate</a> </li>
-                            <li> <a title="Link Title" href="#">Rumah Makan</a> </li>
-                            <li> <a title="Link Title" href="#">Rumah Sakit</a> </li>
-                            <li> <a title="Link Title" href="#">Sarana Olah Raga</a> </li>
-                            <li> <a title="Link Title" href="#">Wisata</a> </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-menu">
-                        <h4 class="title">INFORMASI PAJAK DAN RETRIBUSI</h4>
-                        <ul>
-                            <li> <a title="Link Title" href="#">Perekonomian</a> </li>
-                            <li> <a title="Link Title" href="#">Pekerjaan Umum</a> </li>
-                            <li> <a title="Link Title" href="#">Usaha Pariwisata dan Sosial Budaya</a> </li>
+                            <li><a href="#">Berita</a></li>
+                            <li><a href="#">Pengumuman</a></li>
+                            <li><a href="#">Agenda</a></li>
+                            <li><a href="#">Dokumen</a></li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="footer-menu">
-                        <h4 class="title">APLIKASI DAERAH</h4>
+                        <h4 class="title">Profil Anggota</h4>
                         <ul>
-                            <li> <a title="Link Title" href="#">LPSE</a> </li>
-                            <li> <a title="Link Title" href="#">SMEP</a> </li>
-                            <li> <a title="Link Title" href="#">Lakon</a> </li>
-                            <li> <a title="Link Title" href="#">SIMRENDA</a> </li>
-                            <li> <a title="Link Title" href="#">SIM Anjab dan ABK</a> </li>
-                            <li> <a title="Link Title" href="#">SIMBADA</a> </li>
-                            <li> <a title="Link Title" href="#">SMS Gateway</a> </li>
-                            <li> <a title="Link Title" href="#">SIMPEG</a> </li>
-                            <li> <a title="Link Title" href="#">Database</a> </li>
+                            <li><a href="#">Profil Anggota</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-menu">
+                        <h4 class="title">Cek Data Pemilih</h4>
+                        <ul>
+                            <li> <a title="Link Title" href="#">Cek Data Pemilih</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-menu">
+                        <h4 class="title">Gallery</h4>
+                        <ul>
+                            <li><a href="#">Gallery</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,11 +75,11 @@
 
                 <div class="col-md-4">
                     <p class="footer-contact">
-                        <stong>DINAS KOMUNIKASI DAN INFORMATIKA</stong> <br>
-                        Perkantoran Terpadu Gedung A Lt. 4 <br>
-                        <i class="fa fa-thumb-tack"></i>  Jalan Mayjen Sungkono <br>
-                        <i class="fa fa-phone-square"></i>  (0341) 751550 <br>
-                        <i class="fa fa-envelope"></i> kominfo[at]bantaeng.go.id
+                    <stong>DINAS KOMUNIKASI DAN INFORMATIKA</stong> <br>
+                    Perkantoran Terpadu Gedung A Lt. 4 <br>
+                    <i class="fa fa-thumb-tack"></i>  Jalan Mayjen Sungkono <br>
+                    <i class="fa fa-phone-square"></i>  (0341) 751550 <br>
+                    <i class="fa fa-envelope"></i> kominfo[at]bantaeng.go.id
                     </p>
                 </div>
 

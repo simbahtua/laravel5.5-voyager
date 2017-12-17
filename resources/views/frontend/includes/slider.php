@@ -25,7 +25,7 @@
                     <a data-slide-index="2" href="#">Info Pemilihan</a>
                     <a data-slide-index="3" href="#">Pemilu 2018</a>
                     <a data-slide-index="4" href="#">Pilkada Serentak 2018</a>
-                    <a data-slide-index="4" href="#">Pemilu 2019</a>
+                    <a data-slide-index="5" href="#">Pemilu 2019</a>
                 </div>
             </div>
         </div>
