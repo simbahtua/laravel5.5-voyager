@@ -22,7 +22,7 @@ Route::get('cekdps',['as' => 'cekdps', 'uses' => 'frontend\CekDptController@inde
 
 Route::get('sejarahkpu','frontend\SejarahkpuController@index');
 Route::get('kontak','frontend\KontakController@index');
-Route::get('dokumen','frontend\DokumenController@index');
+Route::get('list_dokumen','frontend\DokumenController@index');
 
 Route::get('list_berita','frontend\BeritaController@index');
 Route::get('/detail_berita/{id}', [
@@ -41,12 +41,19 @@ Route::get('/detail_pengumuman/{id}', [
   'as'   => 'detail_pengumuman'
 ]);
 
+Route::get('/detail_agenda/{id}', [
+  'uses' => 'frontend\AgendaController@detail',
+  'as'   => 'detail_agenda'
+]);
 
+Route::get('list_agenda','frontend\AgendaController@index');
 Route::get('hukum','frontend\HukumController@index');
 Route::get('list_pengumuman','frontend\PengumumanController@index');
 Route::get('profile_anggota','frontend\ProfileAnggotaController@index');
 Route::get('profile_seketariat','frontend\ProfileSeketariatController@index');
 Route::get('visi_misi','frontend\VisiMisiController@index');
+
+Route::get('list_gallery','frontend\GalleryController@index');
 
 
 // Route::post('cekdpt', 'frontend\CekDptController@checkList');
