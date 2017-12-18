@@ -17,12 +17,31 @@ class BeritaController extends Controller {
                 ->where('category_id', '2')
                 ->where('STATUS', 'PUBLISHED')
                 ->get();
+        
+         $data ['berita_random'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('category_id', '2')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->inRandomOrder()
+                ->get();
 
         return \View::make('frontend.home.list_berita', $data);
     }
 
     function detail($id) {  
         $data['page_title'] ='Detail Berita';
+        
+        //Berita random
+        $data ['berita_random'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('category_id', '2')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->inRandomOrder()
+                ->get();
         
         $data['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')

@@ -10,7 +10,7 @@ use App\DataElectionVoter as mVoter;
 class CekDptController extends Controller
 {
     function index() {
-        // echo 'home';
+        $data['page_title'] ='Cek Data Pemilih';
         $listPemilu = DataElection::orderBy('tahun','DESC')->orderBy('id', 'DESC')->get();
         
 

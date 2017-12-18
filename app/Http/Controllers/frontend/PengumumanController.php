@@ -17,6 +17,15 @@ class PengumumanController extends Controller {
                 ->where('category_id', '3')
                 ->where('STATUS', 'PUBLISHED')
                 ->get();
+        
+        $data ['pengumuman_random'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('category_id', '3')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->inRandomOrder()
+                ->get();
 
         return \View::make('frontend.home.list_pengumuman', $data);
     }
@@ -27,11 +36,19 @@ class PengumumanController extends Controller {
         $data['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-//                ->join('*')
                 ->where('posts.category_id', '3')
                 ->where('posts.id', $id)
                 ->where('STATUS', 'PUBLISHED')
                 ->first();
+        
+        $data ['pengumuman_random'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('posts.category_id', '3')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->inRandomOrder()
+                ->get();
 
         return \View::make('frontend.home.detail_pengumuman', $data);
     }

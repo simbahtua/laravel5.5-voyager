@@ -6,7 +6,8 @@ Use View;
 class ProfileAnggotaController extends Controller
 {
     function index() {
-        return \View::make('frontend.home.profile_anggota');
+        $data['page_title'] ='Profil Anggota';
+        return \View::make('frontend.home.profile_anggota', $data);
     }
     
 }

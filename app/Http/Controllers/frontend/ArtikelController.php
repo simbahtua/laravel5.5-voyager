@@ -19,6 +19,15 @@ class ArtikelController extends Controller {
                 ->where('category_id', '1')
                 ->where('STATUS', 'PUBLISHED')
                 ->get();
+        
+        $data ['artikel_random'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('category_id', '1')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->inRandomOrder()
+                ->get();
 
         return \View::make('frontend.home.list_artikel', $data);
     }
@@ -29,11 +38,19 @@ class ArtikelController extends Controller {
         $data['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-//                ->join('*')
                 ->where('posts.category_id', '1')
                 ->where('posts.id', $id)
                 ->where('STATUS', 'PUBLISHED')
                 ->first();
+        
+        $data ['artikel_random'] = DB::table('posts')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('posts.*', 'name')
+                ->where('category_id', '1')
+                ->where('STATUS', 'PUBLISHED')
+                ->limit('5')
+                ->inRandomOrder()
+                ->get();
 
         return \View::make('frontend.home.detail_artikel', $data);
     }

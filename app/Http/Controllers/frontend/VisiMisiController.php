@@ -6,8 +6,9 @@ Use View;
 class VisiMisiController extends Controller
 {
     function index() {
-
-        return \View::make('frontend.home.visi_misi');
+        $data['page_title'] = 'Visi Misi KPU';
+        
+        return \View::make('frontend.home.visi_misi', $data);
     }
     
 }

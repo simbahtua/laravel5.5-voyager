@@ -6,7 +6,7 @@ Use View;
 class DokumenController extends Controller
 {
     function index() {
-        return \View::make('frontend.home.dokumen');
+        return \View::make('frontend.home.list_dokumen');
     }
     
 }

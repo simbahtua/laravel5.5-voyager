@@ -57,6 +57,23 @@ class HomeController extends Controller
                 ->orderBy('id', 'desc')
                 ->get();
         
+        //Gallery
+        $data ['gallery'] = DB::table('app_galleries')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('app_galleries.*', 'name')                
+                ->where('status', 'published')
+                ->limit('5')
+                ->orderBy('id', 'desc')
+                ->get();
+        
+        //Agenda
+        $data ['agenda'] = DB::table('app_agendas')
+                ->join('users', 'users.id', '=', 'author_id')
+                ->select('app_agendas.*', 'name')                                
+                ->limit('5')
+                ->orderBy('id', 'desc')
+                ->get();
+        
         return \View::make('frontend.home.index',$data);
     }
     
