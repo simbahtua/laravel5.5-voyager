@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\facades\DB;
+use DB;
 Use View;
 class HomeController extends Controller
 {
