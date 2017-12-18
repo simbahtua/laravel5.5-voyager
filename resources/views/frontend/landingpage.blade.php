@@ -68,7 +68,7 @@
                                     </a>
                                 </li>
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/gallery'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="<?php echo url('/list_gallery'); ?>" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-gallery.png" class="menu-icon">
                                         <span>Gallery</span>
                                     </a>
