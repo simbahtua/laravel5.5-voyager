@@ -9,7 +9,7 @@
     <div class="panel panel-default panel-content">
         <div class="panel-heading">
             <ol class="breadcrumb">
-                <li><a href="#">Komisi Pemilihan Umum Kabupaten Bantaeng</a></li>
+                <li><a href="#">Beranda</a></li>
                 <li><a href="#">List Berita</a></li>
                 <li class="active">Berita</li>
             </ol>
@@ -84,38 +84,28 @@
                         <div class="panel-heading">
                             <h2>Artikel Lainnya</h2>
                         </div>
+                        
                         <div class="panel-body">
                             <ul class="sidebar-list">
+                                @if(!empty($artikel_random))
+                                @foreach ($artikel_random as $data_random)
+                                @php
+                                $text = substr($data_random->body, 0, 350);
+                                $date = $data_random->created_at;
+                                $tanggal = date('l , d M Y', strtotime($date));
+                                @endphp
                                 <li>
-                                    <a href="#" title="AKBP Asfuri Resmi Jabat Kapolres Bantaeng Kota">AKBP Asfuri Resmi Jabat Kapolres Bantaeng Kota</a>
+                                    <a href="{{route('detail_berita', [$data_random->id])}}" title="{{ $data_random->title }}">{{ $data_random->title }}</a>
                                     <ul class="meta">
-                                        <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
+                                        <li class="post-meta-date"><i class="fa fa-clock-o"></i>{{ $tanggal }}</li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM">Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM</a>
-                                    <ul class="meta">
-                                        <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" title="Pameran Produk Perikanan UMM Disambut Antusias">Pameran Produk Perikanan UMM Disambut Antusias</a>
-                                    <ul class="meta">
-                                        <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" title="Lagi, Kota Bantaeng Raih Penghargaan Natamukti">Lagi, Kota Bantaeng Raih Penghargaan Natamukti</a>
-                                    <ul class="meta">
-                                        <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" title="Bakesbangpol Kota Bantaeng Sosialisasikan Regulasi Pilkada 2018">Bakesbangpol Kota Bantaeng Sosialisasikan Regulasi Pilkada 2018</a>
-                                    <ul class="meta">
-                                        <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                    </ul>
-                                </li>
+                                @endforeach
+                                @else 
+                                <div class="alert alert-info">
+                                    Data Berita Belum Ada 
+                                </div>
+                                @endif
                             </ul>
                         </div>
                     </div>

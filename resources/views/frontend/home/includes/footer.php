@@ -25,20 +25,22 @@
                 </div>
                 <div class="col-md-2">
                     <div class="footer-menu">
-                        <h4 class="title">Informasi Web</h4>
+                        <h4 class="title">Informasi KPU Bantaeng</h4>
                         <ul>
                             <li><a href="<?php echo url('/list_berita'); ?>">Berita</a></li>
+                            <li><a href="<?php echo url('/list_artikel'); ?>">Artikel</a></li>
                             <li><a href="<?php echo url('/list_pengumuman'); ?>">Pengumuman</a></li>
                             <li><a href="<?php echo url('/list_agenda'); ?>">Agenda</a></li>
-                            <li><a href="<?php echo url('/list_dokumen'); ?>">Dokumen</a></li>
+                            <li><a href="#">Dokumen</a></li>
+                            <li><a href="#">Profil Anggota</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="footer-menu">
-                        <h4 class="title">Profil Anggota</h4>
+                        <h4 class="title">Kontak Kami</h4>
                         <ul>
-                            <li><a href="#">Profil Anggota</a></li>
+                            <li><a href="<?php echo url('/kontak'); ?>">Kontak Kami</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,11 +77,11 @@
 
                 <div class="col-md-4">
                     <p class="footer-contact">
-                    <stong>DINAS KOMUNIKASI DAN INFORMATIKA</stong> <br>
+                    <stong>Komisi Pemilihan Umum Kabupaten Bantaeng</stong> <br>
                     Perkantoran Terpadu Gedung A Lt. 4 <br>
                     <i class="fa fa-thumb-tack"></i>  Jalan Mayjen Sungkono <br>
                     <i class="fa fa-phone-square"></i>  (0341) 751550 <br>
-                    <i class="fa fa-envelope"></i> kominfo[at]bantaeng.go.id
+                    <i class="fa fa-envelope"></i> kpu[at]bantaeng.go.id
                     </p>
                 </div>
 
@@ -97,7 +99,6 @@
     </div>
 </footer>
 <!-- /Footer -->
-<?php echo e(asset('web/js/jquery.easing.1.3.js')); ?>
 <script type="text/javascript" src="<?php echo e(asset('web/js/jquery-migrate-1.2.1.min.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('web/js/bootstrap.min.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('web/js/jquery.easing.1.3.js')); ?>"></script>

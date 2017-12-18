@@ -1,5 +1,10 @@
 @extends('frontend.home.app')
 @section('content')
+<div class="page_header_wrap" style="background: url(<?php echo e(asset('web/images/bg-header.jpg')); ?>) center -25px no-repeat">
+        <div class="container">
+            <h2 class="page_category">{{ $page_title }}</h2>
+        </div>
+    </div> 
 <div class="container">
 
     <div class="panel panel-default panel-content">
@@ -19,11 +24,11 @@
                         </div>
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Aplikasi 1</a>
-                                <a href="#" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Aplikasi 2</a>
-                                <a href="#" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Aplikasi 3</a>
-                                <a href="#" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Aplikasi 4</a>
-                                <a href="#" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Aplikasi 5</a>
+                                <a href="https://kpu.go.id/" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>KPU Pusat</a>
+                                <a href="http://jdih.kpu.go.id/" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Produk Hukum</a>
+                                <a href="https://infopemilu.kpu.go.id/" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Informasi Pemilu</a>
+                                <a href="http://www.kpu.go.id/index.php/pages/detail/2017/856" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Dumas</a>
+                                <a href="http://silog.kpu.go.id/" class="list-group-item" target="_top"><i class="fa fa-chevron-circle-right"></i>Informasi Logistik Pemilu</a>
                             </div>
                         </div>
                     </div>

@@ -37,10 +37,10 @@
                         </div>
                         <div class="post-content">
                             <!--<img src="uploads/news/news-large.jpg" class="img-content">-->
-                            <img src="<?php echo e(asset('storage/')); ?>/{{$data->image}}" alt="{{ $data->title }}">
+                            <img src="<?php echo e(asset('storage/')); ?>/{{$data->file}}" alt="{{ $data->title }}">
                             <br>
                             <br>
-                            <p>{{ strip_tags($data->body) }}</p>
+                            <p>{{ strip_tags($data->excerp) }}</p>
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,9 @@
                         </div>
                         <div class="panel-body">
                             <ul class="sidebar-list">
-                                @if(!empty($berita_random))
-                                @foreach ($berita_random as $data_random)
+                                @if(!empty($agenda))
+                                @foreach ($agenda as $data_random)
                                 @php
-                                $text = substr($data_random->body, 0, 350);
                                 $date = $data_random->created_at;
                                 $tanggal = date('l , d M Y', strtotime($date));
                                 @endphp
@@ -69,7 +68,7 @@
                                 @endforeach
                                 @else 
                                 <div class="alert alert-info">
-                                    Data Berita Belum Ada 
+                                    Data Agenda Belum Ada 
                                 </div>
                                 @endif
 

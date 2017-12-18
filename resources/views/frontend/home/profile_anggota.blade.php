@@ -1,15 +1,22 @@
 @extends('frontend.home.app')
 @section('content')
+<div class="page_header_wrap" style="background: url(<?php echo e(asset('web/images/bg-header.jpg')); ?>) center -25px no-repeat">
+    <div class="container">
+        <h2 class="page_category">{{ $page_title }}</h2>
+    </div>
+</div>   
 <div class="container">
 
-        <div class="panel panel-default panel-content">
-            <div class="panel-heading">
-                <ol class="breadcrumb">
-                    <li><a href="#">Pemerintah Kab. Bantaeng</a></li>
-                    <li><a href="#">Pengumuman</a></li>
-                    <li class="active">Kontak</li>
-                </ol>
-            </div>
+
+    <div class="panel panel-default panel-content">
+          <div class="panel-heading">
+            <ol class="breadcrumb">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">List Pengumuman</a></li>
+                <li class="active">Pengumuman</li>
+            </ol>
+
+        </div>
             <div class="panel-body">
                 <div class="row">
                     <!-- main content -->

@@ -24,14 +24,14 @@
 <div id="widget_shortcut">
     <ul>
         <li>
-            <a href="#" title="PPID">
+            <a href="ppid.kpu.go.id" target="_blank" title="PPID">
                 <img src="uploads/menu/icon-ppid.png" class="menu-icon">
                 <span>PPID</span>
             </a>
         </li>
 
         <li>
-            <a href="<?php echo url('/kontak'); ?>" title="Kontak">
+            <a href="<?php echo url('/kontak'); ?>" target="_blank" title="Kontak">
                 <img src="uploads/menu/icon-contact.png" class="menu-icon">
                 <span>Kontak</span>
             </a>

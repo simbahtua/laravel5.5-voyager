@@ -9,11 +9,11 @@
 
 
     <div class="panel panel-default panel-content">
-          <div class="panel-heading">
+        <div class="panel-heading">
             <ol class="breadcrumb">
                 <li><a href="#">Beranda</a></li>
-                <li><a href="#">List Pengumuman</a></li>
-                <li class="active">Pengumuman</li>
+                <li><a href="#">List Agenda</a></li>
+                <li class="active">Agenda</li>
             </ol>
 
         </div>
@@ -23,14 +23,14 @@
                 <div class="col-md-8" id="main-content">
                     <div class="widget-post">
                         <div class="post-heading">
-                            <h1 class="post-title">Pengumuman Terkini</h1>
+                            <h1 class="post-title">Agenda Terkini</h1>
                         </div>
                         <div class="post-list">
                             <ul>                                
                                 @if(!empty($data))
                                 @foreach ($data as $row)
                                     @php
-                                        $text = substr($row->body, 0, 350);
+                                        $text = substr($row->excerp, 0, 350);
                                         $date = $row->created_at;
                                         $hari = date('l', strtotime($date)); 
                                         $tanggal = date('d M Y', strtotime($date));  
@@ -42,7 +42,7 @@
                                             {{ $tanggal }} 
                                         </div>
                                         <div class="list-post-title">
-                                            <h3><a href="#" title="{{ $row->title }}">{{ $row->title }}</a></h3>
+                                            <h3><a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM">{{ $row->title }}</a></h3>
                                             <ul class="meta">
                                                 <li class="post-meta-author"><i class="fa fa-user"></i>Oleh: <a href="#" title="Post Title" rel="author">{{ $row->name }}</a></li>
 <!--                                                <li class="post-meta-view"><i class="fa fa-file-text"></i>Dibaca: 3012 Kali</li>
@@ -51,19 +51,16 @@
                                         </div>
                                     </div>
                                     <div class="list-content">
-                                        <div class="list-post-img">
-                                            <a href="#" title="{{ $row->title }}" class="loop-entry-thumbnail"><img src="<?php echo e(asset('storage/')); ?>/{{$row->image}}" alt="{{ $row->title }}"></a>
-                                        </div>
                                         <div class="list-post-data">
                                             <p>{{ strip_tags($text) }}...</p>
-                                            <p><a href="{{route('detail_pengumuman', [$row->id])}}" title="Baca Selengkapnya : Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM" class="btn btn-default btn-sm">Selengkapnya</a></p>
+                                            <p><a href="{{route('detail_agenda', [$row->id])}}" title="Baca Selengkapnya : {{ $row->title}}" class="btn btn-default btn-sm">Selengkapnya</a></p>
                                         </div>
                                     </div>
                                 </li>
                                 @endforeach
                                 @else 
                                 <div class="alert alert-info">
-                                    Data Pengumuman Belum Ada 
+                                    Data Berita Belum Ada 
                                 </div>
                                 @endif
                             </ul>
@@ -84,19 +81,19 @@
                 <div class="col-md-4" id="side">
                     <div class="panel panel-default panel-theme">
                         <div class="panel-heading">
-                            <h2>Pengumuman Lainnya</h2>
+                            <h2>Agenda Lainnya</h2>
                         </div>
                         <div class="panel-body">
                             <ul class="sidebar-list">
-                                @if(!empty($pengumuman_random))
-                                @foreach ($pengumuman_random as $data_random)
+                                @if(!empty($agenda_random))
+                                @foreach($agenda_random as $data_random)
                                 @php
-                                $text = substr($data_random->body, 0, 350);
+                                $text = substr($data_random->excerp, 0, 350);
                                 $date = $data_random->created_at;
                                 $tanggal = date('l , d M Y', strtotime($date));
                                 @endphp
                                 <li>
-                                    <a href="{{route('detail_pengumuman', [$data_random->id])}}" title="{{ $data_random->title }}">{{ $data_random->title }}</a>
+                                    <a href="{{route('detail_berita', [$data_random->id])}}" title="{{ $data_random->title }}">{{ $data_random->title }}</a>
                                     <ul class="meta">
                                         <li class="post-meta-date"><i class="fa fa-clock-o"></i>{{ $tanggal }}</li>
                                     </ul>
@@ -107,6 +104,7 @@
                                     Data Berita Belum Ada 
                                 </div>
                                 @endif
+
                             </ul>
                         </div>
                     </div>

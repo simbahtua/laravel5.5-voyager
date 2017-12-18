@@ -6,9 +6,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<ul class="main-bxslider">
-						<li><img src="web/uploads/slide/slider_01.jpg" alt="Pemerintah Kabupaten Bantaen"></li>
-						<li><img src="web/uploads/slide/slider_02.jpg" alt="Pemerintah Kabupaten Bantaen"></li>
-						<li><img src="web/uploads/slide/slider_03.jpg" alt="Pemerintah Kabupaten Bantaen"></li>
+						<li><img src="web/uploads/slide/slider_01.jpg" alt="Komisi Pemilihan Kabupaten Bantaeng"></li>
+						<li><img src="web/uploads/slide/slider_03.jpg" alt="Komisi Pemilihan Kabupaten Bantaeng"></li>
 					</ul>
 				</div>
 			</div>

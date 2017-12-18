@@ -62,13 +62,13 @@
                                 </li>
 
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/dokumen'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="#" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-dokumen.png" class="menu-icon">
                                         <span>Dokumen</span>
                                     </a>
                                 </li>
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/kontak'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="<?php echo url('/gallery'); ?>" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-gallery.png" class="menu-icon">
                                         <span>Gallery</span>
                                     </a>
@@ -80,13 +80,13 @@
                                     </a>
                                 </li>
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/cekdps'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="https://pilkada2015.kpu.go.id/" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-infohasil.png" class="menu-icon">
                                         <span>Informasi Hasil Perhitungan Suara</span>
                                     </a>
                                 </li>
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/cekdps'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="#" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-pemilu.png" class="menu-icon">
                                         <span>Pemilu Pilkada</span>
                                     </a>

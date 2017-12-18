@@ -83,7 +83,7 @@
 
                                 <li>
                                     <div class="img"><img src="<?php echo e(asset('storage/')); ?>/{{$row_artikel->image}}" alt="{{ $row_artikel->title }}"></div>
-                                    <a href="{{route('detail_berita', [$row_artikel->id])}}" class="headline-title" title="{{ $row_artikel->title }}">{{ $row_artikel->title }}</a>
+                                    <a href="{{route('detail_artikel', [$row_artikel->id])}}" class="headline-title" title="{{ $row_artikel->title }}">{{ $row_artikel->title }}</a>
                                     <span class="meta">{{ $tanggal }}</span>
                                 </li>
                                 @endforeach
@@ -105,7 +105,7 @@
                                 @endphp
 
                                 <li>
-                                    <a href="{{route('detail_berita', [$row_artikel_random->id])}}" class="headline-title" title="article title">{{ $row_artikel_random->title }}</a>
+                                    <a href="{{route('detail_artikel', [$row_artikel_random->id])}}" class="headline-title" title="article title">{{ $row_artikel_random->title }}</a>
                                     <span class="meta">{{ $tanggal }}</span>
                                 </li>
                                 @endforeach
@@ -134,42 +134,21 @@
                         </div>
                         <div class="panel-body">
                             <ul>
+                                @if(!empty($gallery))
+                                @foreach ($gallery as $row_gallery)
                                 <li>
                                     <a href="#" title="Title Link">
-                                        <img src="web/images/links/banner-hukum.png" alt="img title">
-                                        <h4>Gallery Album 1</h4>
+                                        <img src="<?php echo e(asset('storage/')); ?>/{{$row_gallery->file}}" alt="{{ $row_gallery->title }}">
+                                        <!--<img src="web/images/links/banner-hukum.png" alt="img title">-->
+                                        <h4>{{ $row_gallery->title }}</h4>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" title="Title Link">
-                                        <img src="web/images/links/banner-hukum.png" alt="img title">
-                                        <h4>Gallery Album 1</h4>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Title Link">
-                                        <img src="web/images/links/banner-hukum.png" alt="img title">
-                                        <h4>Gallery Album 1</h4>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Title Link">
-                                        <img src="web/images/links/banner-hukum.png" alt="img title">
-                                        <h4>Gallery Album 1</h4>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Title Link">
-                                        <img src="web/images/links/banner-hukum.png" alt="img title">
-                                        <h4>Gallery Album 1</h4>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Title Link">
-                                        <img src="web/images/links/banner-hukum.png" alt="img title">
-                                        <h4>Gallery Album 1</h4>
-                                    </a>
-                                </li>
+                                @endforeach
+                                @else 
+                                <div class="alert alert-info">
+                                    Data Gallery Belum Ada 
+                                </div>
+                                @endif
                             </ul>
 
                             <div class="nav-slide">
@@ -202,12 +181,12 @@
                                     <a href="{{route('detail_pengumuman', [$row_pengumuman->id])}}" class="headline-title" title="{{ $row_pengumuman->title }}">{{ $row_pengumuman->title }}</a>
                                     <span class="meta">{{ $tanggal }}</span>
                                 </li>
-                            @endforeach
-                            @else 
-                            <div class="alert alert-info">
-                                Data Pengumuman Belum Ada 
-                            </div>
-                            @endif
+                                @endforeach
+                                @else 
+                                <div class="alert alert-info">
+                                    Data Pengumuman Belum Ada 
+                                </div>
+                                @endif
                             </ul>
                         </div>
                         <div class="panel-footer">
@@ -218,27 +197,47 @@
             </div>
 
             <div class="col-md-6">
-                <div class="panel panel-default panel-theme">
-                    <div class="panel-heading">
-                        <h2>Agenda</h2>
-                    </div>
-                    <div class="panel-body">
-                        <i>widget google calendar here</i>
-                    </div>
-                    <div class="panel-footer">
-                        &nbsp;
+                <div class="article-list" id="widget-info">
+                    <div class="panel panel-default panel-theme">
+                        <div class="panel-heading">
+                            <h2>Agenda</h2>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-info">
+                                @if(!empty($agenda))
+                                @foreach ($agenda as $row_agenda)
+                                @php
+                                $date = $row_agenda->start_date;
+                                $tanggal = date('l , d M Y', strtotime($date));
+                                @endphp
+                                <li>
+                                    <a href="{{route('detail_agenda', [$row_agenda->id])}}" class="headline-title" title="{{ $row_agenda->title }}">{{ $row_agenda->title }}</a>
+                                    Tempat : {{ $row_agenda->place }}                                   
+                                    <span class="meta">Tanggal : {{ $tanggal }}</span>
+                                </li>
+                                @endforeach
+                                @else 
+                                <div class="alert alert-info">
+                                    Data Agenda Belum Ada 
+                                </div>
+                                @endif
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="<?php echo url('/list_agenda'); ?>" class="more-link">Agenda Selengkapnya &nbsp;&raquo;</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Section 4 -->
+        Section 4 
         <div class="row">
             <div class="col-md-12">
                 <div class="article-list" id="widget-lpse">
                     <div class="panel panel-default panel-theme">
                         <div class="panel-heading">
-                            <h2 class="heading-center">Informasi LPSE</h2>
+                            <h2 class="heading-center">Informasi Dokumen</h2>
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -246,8 +245,8 @@
                                     <div class="lpse-wrap">
                                         <div class="lpse-mid">
                                             <span class="fa fa-copy"></span>
-                                            <h3>PENGUMUMAN <b>PENGADAAN BARANG/JASA</b></h3>
-                                            <a href="#" class="btn btn-default">Pengumuman Selengkapnya &nbsp;&raquo;</a>
+                                            <h3>File <b>Dokumen Komisi Pemilihan Umum</b></h3>
+                                            <a href="#" class="btn btn-default">Dokumen Selengkapnya &nbsp;&raquo;</a>
                                         </div>
                                     </div>
                                 </div>
