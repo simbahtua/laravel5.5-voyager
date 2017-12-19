@@ -17,7 +17,7 @@ class GalleryController extends Controller {
                 ->select('app_galleries.*', 'name')
                 ->where('status', 'published')
                 ->orderBy('id', 'desc')
-                ->get();
+                ->paginate(6);
 
 
         return \View::make('frontend.home.list_gallery', $data);

@@ -11,18 +11,18 @@ use App\Carbon\Carbon;
 class AgendaController extends Controller {
 
     function index() {
-        $data['page_title'] ='Artikel';
-        
+        $data['page_title'] = 'Artikel';
+
         $data ['data'] = DB::table('app_agendas')
                 ->join('users', 'users.id', '=', 'author_id')
-                ->select('app_agendas.*', 'name')                                
+                ->select('app_agendas.*', 'name')
                 ->limit('5')
                 ->orderBy('id', 'desc')
-                ->get();
-        
+                ->paginate(5);
+
         $data ['agenda_random'] = DB::table('app_agendas')
                 ->join('users', 'users.id', '=', 'author_id')
-                ->select('app_agendas.*', 'name')                                
+                ->select('app_agendas.*', 'name')
                 ->limit('5')
                 ->orderBy('id', 'desc')
                 ->inRandomOrder()
@@ -32,22 +32,22 @@ class AgendaController extends Controller {
     }
 
     function detail($id) {
-        $data['page_title'] ='Detail Agenda';        
-        
+        $data['page_title'] = 'Detail Agenda';
+
         $data ['data'] = DB::table('app_agendas')
                 ->join('users', 'users.id', '=', 'author_id')
-                ->select('app_agendas.*', 'name')                                
+                ->select('app_agendas.*', 'name')
                 ->where('app_agendas.id', $id)
                 ->orderBy('id', 'desc')
                 ->first();
-        
+
 //         $data ['agenda'] = DB::table('app_agendas')
 //                ->join('users', 'users.id', '=', 'author_id')
 //                ->select('app_agendas.*', 'name')                                
 //                ->limit('5')
 //                ->orderBy('id', 'desc')
 //                ->get();
-        
+
 
         return \View::make('frontend.home.detail_agenda', $data);
     }

@@ -11,12 +11,14 @@ class BeritaController extends Controller {
 
     function index() {
         $data['page_title'] ='Berita';
+        
         $data ['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
                 ->where('category_id', '2')
                 ->where('STATUS', 'PUBLISHED')
-                ->get();
+                ->orderBy('id', 'desc')
+                ->paginate(5);
         
          $data ['berita_random'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')

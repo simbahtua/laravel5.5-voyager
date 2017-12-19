@@ -16,7 +16,7 @@ class PengumumanController extends Controller {
                 ->select('posts.*', 'name')
                 ->where('category_id', '3')
                 ->where('STATUS', 'PUBLISHED')
-                ->get();
+                ->paginate(5);
         
         $data ['pengumuman_random'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')

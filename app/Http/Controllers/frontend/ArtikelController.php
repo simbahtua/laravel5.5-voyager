@@ -18,7 +18,8 @@ class ArtikelController extends Controller {
                 ->select('posts.*', 'name')
                 ->where('category_id', '1')
                 ->where('STATUS', 'PUBLISHED')
-                ->get();
+                ->orderBy('id', 'desc')
+                ->paginate(5);
         
         $data ['artikel_random'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
