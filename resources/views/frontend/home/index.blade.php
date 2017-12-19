@@ -255,12 +255,12 @@
                                         @if(!empty($dokumen))
                                         @foreach ($dokumen as $row_dokumen)
                                         @php
+                                        $date = date('d-m-Y');
                                             $file = json_decode($row_dokumen->filename);
                                             $download_link = $file[0]->download_link;
                                         @endphp
-                                        {{$download_link}}
                                         <li>
-                                            <a href="{{route('download_file', [$row_dokumen->id])}}" class="headline-title" target="_blank" title="{{ $row_dokumen->title }}">{{ $row_dokumen->title }}</a>                                            
+                                            <a href="<?php echo e(asset('storage/')); ?>/{{$download_link}}" download="{{ $row_dokumen->title }}_{{$date}}" class="headline-title" target="_blank" title="{{ $row_dokumen->title }}">{{ $row_dokumen->title }}</a>                                            
                                         </li>
                                         @endforeach
                                         @else 
