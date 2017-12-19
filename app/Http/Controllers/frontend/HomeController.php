@@ -96,33 +96,21 @@ class HomeController extends Controller {
         return \View::make('frontend.home.detail');
     }
 
-    function download_file($id) {
-
-//        print_r($download_link);
-//        die($id);
-
-        $data = DB::table('app_documents')
-                ->select('filename')
-                ->where('id', $id)
-                ->first();
-        foreach ($data as $row) {
-
-            $file = json_decode($row);
-            $download_link = $file[0]->download_link;
-        }
-        
-//        $a =  url('/').'/';
-        //http://localhost/kpu/public/storage/document/December2017/iljclKYoj8FQFg33qrUh.pdf
-        //
-//        die($a);
-        
-        $path = url('/').'/storage/' . $download_link;
-//        die($path);
-        return response()->download(storage_path('app/public/' . $filename));
-        return response()->download($path);
-//        return Response::download($path);
-//        return response()->download($file);
-//        return \View::make('frontend.home.detail_berita', $data);
-    }
+//    function download_file($id) {
+//
+//        $data = DB::table('app_documents')
+//                ->select('filename')
+//                ->where('id', $id)
+//                ->first();
+//        foreach ($data as $row) {
+//
+//            $file = json_decode($row);
+//            $download_link = $file[0]->download_link;
+//            
+//            $path = url('/') . '/storage/' . $download_link;
+//
+//            return response()->download($path, $headers);
+//        }
+//    }
 
 }
