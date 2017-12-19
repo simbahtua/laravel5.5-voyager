@@ -69,12 +69,14 @@
                             </ul>
 
                             <ul class="pagination">
-                                <li class="active"><span class="page-numbers">1</span></li>
+<!--                                <li class="active"><span class="page-numbers">1</span></li>
                                 <li><a class="page-numbers" href="#">2</a></li>
                                 <li><a class="page-numbers" href="#">3</a></li>
                                 <li><span class="page-numbers dots">…</span></li>
                                 <li><a class="page-numbers" href="#">20</a></li>
-                                <li><a class="page-numbers" href="#">»</a></li>
+                                <li><a class="page-numbers" href="#">»</a></li>-->
+                                
+                                {!! $data->render() !!} 
                             </ul>
                         </div>
                     </div>
