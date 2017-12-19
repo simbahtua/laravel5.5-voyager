@@ -78,12 +78,12 @@
                             <div class="collapse navbar-collapse" id="navbar-collapse">
                                 <div class="top-info">
                                     <ul class="topmenu">
-                                        <li>
+<!--                                        <li>
                                             <a href="#" class="mail-link">Email</a>
                                         </li>
                                         <li>
                                             <a href="#" class="data-link">Penyimpanan Online</a>
-                                        </li>
+                                        </li>-->
                                     </ul>
                                 </div>
 
@@ -108,7 +108,7 @@
                                             <li><a href="<?php echo url('/list_artikel'); ?>">Artikel</a></li>
                                             <li><a href="<?php echo url('/list_pengumuman'); ?>">Pengumuman</a></li>
                                             <li><a href="<?php echo url('/list_agenda'); ?>">Agenda</a></li>
-                                            <li><a href="#">Dokumen</a></li>
+                                            <li><a href="<?php echo url('/list_dokumen'); ?>">Dokumen</a></li>
                                             <li><a href="#">Profil Anggota</a></li>
                                         </ul>
                                     </li>

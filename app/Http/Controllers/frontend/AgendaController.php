@@ -11,7 +11,7 @@ use App\Carbon\Carbon;
 class AgendaController extends Controller {
 
     function index() {
-        $data['page_title'] = 'Artikel';
+        $data['page_title'] = 'Agenda';
 
         $data ['data'] = DB::table('app_agendas')
                 ->join('users', 'users.id', '=', 'author_id')

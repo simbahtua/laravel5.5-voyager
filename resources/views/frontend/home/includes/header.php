@@ -78,14 +78,14 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="navbar-collapse">
                                 <div class="top-info">
-                                    <ul class="topmenu">
+<!--                                    <ul class="topmenu">
                                         <li>
                                             <a href="#" class="mail-link">Email</a>
                                         </li>
                                         <li>
                                             <a href="#" class="data-link">Penyimpanan Online</a>
                                         </li>
-                                    </ul>
+                                    </ul>-->
                                 </div>
 
                                 <ul class="nav navbar-nav navbar-left">
@@ -108,7 +108,7 @@
                                             <li><a href="<?php echo url('/list_artikel'); ?>">Artikel</a></li>
                                             <li><a href="<?php echo url('/list_pengumuman'); ?>">Pengumuman</a></li>
                                             <li><a href="<?php echo url('/list_agenda'); ?>">Agenda</a></li>
-                                            <li><a href="#">Dokumen</a></li>
+                                            <li><a href="<?php echo url('/list_dokumen'); ?>">Dokumen</a></li>
                                             <li><a href="#">Profil Anggota</a></li>
                                         </ul>
                                     </li>

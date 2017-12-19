@@ -1,7 +1,7 @@
 @include('frontend.includes.header')
 @include('frontend.includes.slider')
 
-<section id="main-container">
+<section id="main-container" style="top: 40px">
     <div class="container">
         <!-- Section 1 -->
         <div class="row">
@@ -27,7 +27,7 @@
                                 </li>
 
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="<?php echo url('/profile_seketariat'); ?>" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="<?php echo url('/list_agenda'); ?>" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-agenda.png" class="menu-icon">
                                         <span>Agenda</span>
                                     </a>
@@ -62,7 +62,7 @@
                                 </li>
 
                                 <li class="menubar">
-                                    <a class="icon-layanan-perizinan " href="#" target="_blank" rel="noopener noreferrer">
+                                    <a class="icon-layanan-perizinan " href="<?php echo url('/list_dokumen'); ?>" target="_blank" rel="noopener noreferrer">
                                         <img src="uploads/menu/icon-dokumen.png" class="menu-icon">
                                         <span>Dokumen</span>
                                     </a>
@@ -102,6 +102,8 @@
         </div>
     </div>
 </section>
+<br>
+<br>
 <!-- /Main -->
 <!-- /Main -->
 @include('frontend.includes.footer')
