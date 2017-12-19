@@ -46,6 +46,11 @@ Route::get('/detail_agenda/{id}', [
   'as'   => 'detail_agenda'
 ]);
 
+Route::get('/download_file/{id}', [
+  'uses' => 'frontend\HomeController@download_file',
+  'as'   => 'download_file'
+]);
+
 Route::get('list_agenda','frontend\AgendaController@index');
 Route::get('hukum','frontend\HukumController@index');
 Route::get('list_pengumuman','frontend\PengumumanController@index');

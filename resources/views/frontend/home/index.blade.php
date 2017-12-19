@@ -230,7 +230,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-12">
                 <div class="article-list" id="widget-lpse">
@@ -252,30 +252,22 @@
 
                                 <div class="col-md-6">
                                     <ul class="list-info">
+                                        @if(!empty($dokumen))
+                                        @foreach ($dokumen as $row_dokumen)
+                                        @php
+                                            $file = json_decode($row_dokumen->filename);
+                                            $download_link = $file[0]->download_link;
+                                        @endphp
+                                        {{$download_link}}
                                         <li>
-                                            <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                            <span class="meta">Selasa, 5 Desember 2017 5:00</span>
+                                            <a href="{{route('download_file', [$row_dokumen->id])}}" class="headline-title" target="_blank" title="{{ $row_dokumen->title }}">{{ $row_dokumen->title }}</a>                                            
                                         </li>
-
-                                        <li>
-                                            <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                            <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                            <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                            <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="headline-title" title="article title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                                            <span class="meta">Selasa, 5 Desember 2017 5:00</span>
-                                        </li>
+                                        @endforeach
+                                        @else 
+                                        <div class="alert alert-info">
+                                            Data Dokumen Ada 
+                                        </div>
+                                        @endif
                                     </ul>
                                 </div>
                             </div>
