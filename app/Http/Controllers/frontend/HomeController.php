@@ -86,8 +86,11 @@ class HomeController extends Controller {
                 ->orderBy('id', 'desc')
                 ->get();
 
-//        print_r($data['dokumen']);
-//        die();
+        $data ['slider'] = DB::table('app_page_sliders')
+                ->select('*')
+                ->where('status', 'published')
+                ->orderBy('id', 'desc')
+                ->get();
 
         return \View::make('frontend.home.index', $data);
     }
@@ -112,5 +115,4 @@ class HomeController extends Controller {
 //            return response()->download($path, $headers);
 //        }
 //    }
-
 }
