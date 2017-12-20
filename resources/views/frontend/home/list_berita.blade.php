@@ -29,24 +29,24 @@
                             <ul>                                
                                 @if(!empty($data))
                                 @foreach ($data as $row)
-                                    @php
-                                        $text = substr($row->body, 0, 350);
-                                        $date = $row->created_at;
-                                        $hari = date('l', strtotime($date)); 
-                                        $tanggal = date('d M Y', strtotime($date));  
-                                    @endphp
+                                @php
+                                $text = substr($row->body, 0, 350);
+                                $date = $row->created_at;
+                                $hari = date('l', strtotime($date)); 
+                                $tanggal = date('d M Y', strtotime($date));  
+                                @endphp
                                 <li>
                                     <div class="list-head">
-                                        <div class="list-post-date">
-                                            <strong>{{ $hari }}</strong>
-                                            {{ $tanggal }} 
-                                        </div>
+                                        <!--                                        <div class="list-post-date">
+                                                                                    
+                                                                                </div>-->
                                         <div class="list-post-title">
                                             <h3><a href="#" title="{{ $row->title }}">{{ $row->title }}</a></h3>
                                             <ul class="meta">
                                                 <li class="post-meta-author"><i class="fa fa-user"></i>Oleh: <a href="#" title="Post Title" rel="author">{{ $row->name }}</a></li>
 <!--                                                <li class="post-meta-view"><i class="fa fa-file-text"></i>Dibaca: 3012 Kali</li>
                                                 <li class="post-meta-comments comments-scroll"><i class="fa fa-comments"></i><a href="#">0 Komentar</a></li>-->
+                                                |  <strong>{{ $hari }}</strong> , {{ $tanggal }}
                                             </ul>
                                         </div>
                                     </div>
@@ -69,13 +69,6 @@
                             </ul>
 
                             <ul class="pagination">
-<!--                                <li class="active"><span class="page-numbers">1</span></li>
-                                <li><a class="page-numbers" href="#">2</a></li>
-                                <li><a class="page-numbers" href="#">3</a></li>
-                                <li><span class="page-numbers dots">…</span></li>
-                                <li><a class="page-numbers" href="#">20</a></li>
-                                <li><a class="page-numbers" href="#">»</a></li>-->
-                                
                                 {!! $data->render() !!} 
                             </ul>
                         </div>
