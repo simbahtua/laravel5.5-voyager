@@ -42,17 +42,17 @@
                                             {{ $tanggal }} 
                                         </div>
                                         <div class="list-post-title">
-                                            <h3><a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM">{{ $row->title }}</a></h3>
+                                            <h3><a href="#" title="{{ $row->title }}">{{ $row->title }}</a></h3>
                                             <ul class="meta">
                                                 <li class="post-meta-author"><i class="fa fa-user"></i>Oleh: <a href="#" title="Post Title" rel="author">{{ $row->name }}</a></li>
-                                                <li class="post-meta-view"><i class="fa fa-file-text"></i>Dibaca: 3012 Kali</li>
-                                                <li class="post-meta-comments comments-scroll"><i class="fa fa-comments"></i><a href="#">0 Komentar</a></li>
+<!--                                                <li class="post-meta-view"><i class="fa fa-file-text"></i>Dibaca: 3012 Kali</li>
+                                                <li class="post-meta-comments comments-scroll"><i class="fa fa-comments"></i><a href="#">0 Komentar</a></li>-->
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="list-content">
                                         <div class="list-post-img">
-                                            <a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM" class="loop-entry-thumbnail"><img src="<?php echo e(asset('storage/')); ?>/{{$row->image}}" alt="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM"></a>
+                                            <a href="#" title="{{ $row->title }}" class="loop-entry-thumbnail"><img src="<?php echo e(asset('storage/')); ?>/{{$row->image}}" alt="{{ $row->title }}"></a>
                                         </div>
                                         <div class="list-post-data">
                                             <p>{{ strip_tags($text) }}...</p>
