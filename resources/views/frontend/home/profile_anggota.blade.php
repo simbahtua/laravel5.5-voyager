@@ -9,88 +9,127 @@
 
 
     <div class="panel panel-default panel-content">
-          <div class="panel-heading">
+        <div class="panel-heading">
             <ol class="breadcrumb">
                 <li><a href="#">Beranda</a></li>
-                <li><a href="#">List Pengumuman</a></li>
-                <li class="active">Pengumuman</li>
+                <li><a href="active">Profil Anggota</a></li>
+                <!--<li class="active">Pengumuman</li>-->
             </ol>
 
         </div>
-            <div class="panel-body">
-                <div class="row">
-                    <!-- main content -->
-                    <div class="col-md-8" id="main-content">
-                        <div class="widget-post">
-                            <div class="post-heading">
-                                <h1 class="post-title">Ini Adalah Halaman Profil Anggota KPU Bantaeng</h1>
-                                <div class="clearfix"></div>
-                                <ul class="meta">
-                                    <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                    <li class="post-meta-author"><i class="fa fa-user"></i>Oleh: <a href="#" title="Post Title" rel="author">Bidang Informasi Publik</a></li>
-                                    <li class="post-meta-view"><i class="fa fa-file-text"></i>Dibaca: 3012 Kali</li>
-                                    <li class="post-meta-comments comments-scroll"><i class="fa fa-comments"></i><a href="#">0 Komentar</a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content">
-                                <img src="uploads/news/news-large.jpg" class="img-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem! Quia voluptas maiores, aliquid aspernatur, at assumenda vero distinctio!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem! Quia voluptas maiores, aliquid aspernatur, at assumenda vero distinctio!</p>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem! Quia voluptas maiores, aliquid aspernatur, at assumenda vero distinctio!</p>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem! Quia voluptas maiores, aliquid aspernatur, at assumenda vero distinctio!</p>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi exercitationem vitae esse sunt cumque ab obcaecati hic accusamus, quia, voluptatum quidem! Quia voluptas maiores, aliquid aspernatur, at assumenda vero distinctio!</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- sidebar -->
-                    <div class="col-md-4" id="side">
+        <div class="panel-body">
+            <div class="row">
+                <!-- main content -->
+                <div class="col-md-12" id="main-content">
+                    <div class="widget">
                         <div class="panel panel-default panel-theme">
                             <div class="panel-heading">
-                                <h2>Berita Lainnya</h2>
+                                <h2 class="heading-center" style="width: 40%;">{{ $page_title }}</h2>
                             </div>
+
                             <div class="panel-body">
-                                <ul class="sidebar-list">
-                                    <li>
-                                        <a href="#" title="AKBP Asfuri Resmi Jabat Kapolres Bantaeng Kota">AKBP Asfuri Resmi Jabat Kapolres Bantaeng Kota</a>
-                                        <ul class="meta">
-                                            <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM">Dinas Kominfo Gelar Bimtek Operasional Aplikasi e-SPM</a>
-                                        <ul class="meta">
-                                            <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Pameran Produk Perikanan UMM Disambut Antusias">Pameran Produk Perikanan UMM Disambut Antusias</a>
-                                        <ul class="meta">
-                                            <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Lagi, Kota Bantaeng Raih Penghargaan Natamukti">Lagi, Kota Bantaeng Raih Penghargaan Natamukti</a>
-                                        <ul class="meta">
-                                            <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Bakesbangpol Kota Bantaeng Sosialisasikan Regulasi Pilkada 2018">Bakesbangpol Kota Bantaeng Sosialisasikan Regulasi Pilkada 2018</a>
-                                        <ul class="meta">
-                                            <li class="post-meta-date"><i class="fa fa-clock-o"></i>Selasa, 26 September 2017 16:25 WIB</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <div class="widget_team_profile">
+                                    <ul>
+                                        @if(!empty($profile))
+                                        @foreach ($profile as $row) 
+                                        <li>
+                                            <div class="team_img">
+                                                <div class="img">
+                                                    <img src="<?php echo e(asset('storage/')); ?>/{{$row->file_gambar}}" alt="{{ $row->nama }}"> 
+                                                </div>
+
+                                            </div>
+                                            <div class="team_info">
+                                                <h3>{{ $row->nama }}</h3>
+                                                <div class="team_info_content">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="team_row">
+                                                                <span class="_label">Tempat, Tanggal Lahir</span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->tempat_lahir }} , {{ $row->tanggal_lahir }}</span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Alamat</span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->alamat }}</span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Jenis Kelamin</span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->jenis_kelamin }} </span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Agama </span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->agama }} </span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Status Perkawinan </span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->status_pernikahan }} </span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Nama Pasangan </span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->nama_pasangan }}</span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Jumlah Anak </span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->jumlah_anak }} Orang </span>
+                                                            </div>
+                                                            <div class="team_row">
+                                                                <span class="_label">Pendidikan Terakhir </span>
+                                                                <span class="_separator">:</span>
+                                                                <span class="_info">{{ $row->pendidikan }}</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="team_row full_row">
+                                                                <span class="_label">Pekerjaan /Jabatan :</span>
+                                                                <span class="_info">
+                                                                    <ul class="_infolist">
+                                                                        <li>{{ $row->jabatan }}</li>
+                                                                    </ul>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="team_row full_row">
+                                                                <span class="_label">Pengalaman Organisasi :</span>
+                                                                <span class="_info">
+                                                                    <ul class="_infolist">
+                                                                        {!! $row->pengalaman !!}                             
+                                                                    </ul>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        @endforeach
+                                        @else 
+                                        <div class="alert alert-info">
+                                            Data Anggota Belum Ada 
+                                        </div>
+                                        @endif
+                                    </ul>
+
+                                    <div class="nav-slide">
+                                        <span class="nav-prev _2nd"></span>
+                                        <span class="nav-next _2nd"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+</div>
+</div>
 @endsection

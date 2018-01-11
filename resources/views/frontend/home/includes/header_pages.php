@@ -99,7 +99,7 @@
 
                                         </ul>
                                     </li>
-                                    <li><a href="<?php echo url('/kontak'); ?>">Kontak Kami</a></li>
+                                    <!--<li><a href="<?php //echo url('/kontak'); ?>">Kontak Kami</a></li>-->
                                     
                                     <li class="dropdown">
                                         <a href="#">Informasi Web</a>
@@ -109,7 +109,7 @@
                                             <li><a href="<?php echo url('/list_pengumuman'); ?>">Pengumuman</a></li>
                                             <li><a href="<?php echo url('/list_agenda'); ?>">Agenda</a></li>
                                             <li><a href="<?php echo url('/list_dokumen'); ?>">Dokumen</a></li>
-                                            <li><a href="#">Profil Anggota</a></li>
+                                            <li><a href="<?php echo url('/profile_anggota'); ?>">Profil Anggota</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="<?php echo url('/list_gallery'); ?>">Gallery</a></li>

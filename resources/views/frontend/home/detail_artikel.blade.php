@@ -41,7 +41,7 @@
                             <img src="<?php echo e(asset('storage/')); ?>/{{$data->image}}" alt="{{ $data->title }}">
                             <br>
                             <br>
-                            <p>{{ strip_tags($data->body) }}</p>
+                            <p> {!! $data->body !!}</p>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@
 <div id="widget_shortcut">
     <ul>
         <li>
-            <a href="ppid.kpu.go.id" target="_blank" title="PPID">
+            <a href="http://ppid.kpu.go.id" target="_blank" title="PPID">
                 <img src="uploads/menu/icon-ppid.png" class="menu-icon">
                 <span>PPID</span>
             </a>

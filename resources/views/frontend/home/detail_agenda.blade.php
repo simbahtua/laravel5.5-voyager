@@ -40,7 +40,7 @@
                             <img src="<?php echo e(asset('storage/')); ?>/{{$data->file}}" alt="{{ $data->title }}">
                             <br>
                             <br>
-                            <p>{{ strip_tags($data->excerp) }}</p>
+                            <p> {!! $data->excerp !!}</p>
                         </div>
                     </div>
                 </div>

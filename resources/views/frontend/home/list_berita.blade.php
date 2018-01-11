@@ -37,6 +37,12 @@
                                 @endphp
                                 <li>
                                     <div class="list-head">
+                                        <div class="list-post-date">
+                                            <span class="dates">
+                                                <strong>{{$hari}}</strong>
+                                                {{$tanggal}}
+                                            </span>
+                                        </div>
                                         <!--                                        <div class="list-post-date">
                                                                                     
                                                                                 </div>-->
