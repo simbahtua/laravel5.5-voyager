@@ -1041,7 +1041,7 @@
   .slide-container .bx-wrapper .bx-pager {
     text-align: center;
     padding: 13px 15px;
-    height: 50px;
+    height: 75px;
   }
   .slide-container .bx-wrapper .bx-pager .bx-pager-item {
     display: inline-block;
@@ -1054,7 +1054,8 @@
     line-height: 50px;
   }
   .slide-container .bx-wrapper .bx-pager .bx-pager-item a {
-    display: inline-block;
+    display: block;
+    margin: 0;
     width: 100%;
     height: 100%;
     background: #fff;
@@ -2171,7 +2172,7 @@
     display: inline-block;
     width: 100%;
     position: relative;
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
     border-top: 2px solid #3D3D3D;
   }
 
@@ -2184,26 +2185,39 @@
     padding: 0;
   }
   .post-list .list-head .list-post-date {
-    background-color: #3D3D3D;
+
     display: table-cell;
     float: none;
-    vertical-align: bottom;
+    vertical-align: top;
     color: #fff;
     position: relative;
     margin: 0;
     text-align: center;
-    padding: 25px 15px;
+    /*padding: 15px 15px;*/
+    width: 10%;
+    font-size: 12px;
+  }
+
+  .post-list .list-head .list-post-date .dates {
+    background-color: #3D3D3D;
+    display: inline-block;
+    padding: 30px 15px;
+    width: 100px;
   }
 
   .post-list .list-head .list-post-date strong {
-    font-size: 18px;
+    font-size: 20px;
     display: block;
   }
 
   .post-list .list-head .list-post-title {
     display: table-cell;
     vertical-align: bottom;
-    padding: 15px 20px 0;
+    padding: 15px 0px 0 20px;
+    width: 90%;
+  }
+  .post-list .list-head .list-post-title h3 {
+    font-size: 20px;
   }
   .post-list .list-head .list-post-title h3 > a {
     font-weight: 600;
@@ -2212,13 +2226,14 @@
     display: inline-block;
     width: 100%;
     position: relative;
+    padding: 15px 0 5px;
   }
 
   .post-list .list-content .list-post-img {
     float: left;
     vertical-align: bottom;
     position: relative;
-    width: 120px;
+    width: 180px;
   }
   .post-list .list-content .list-post-img a {
     display: inline-block;
@@ -2437,6 +2452,196 @@
   .gallery_cover li:hover .cover a .cover_title { bottom:15px; opacity:1; }
   /* ----------------------------------- BLOCK GALLERY --------------------- */
 
+  /* ----------------------------------- WIDGET TEAM --------------------- */
+  .widget_team_profile {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-top: 25px;
+    padding: 30px;
+  }
+
+  .widget_team_profile ul {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .widget_team_profile > ul > li {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 30px;
+  }
+
+  .widget_team_profile ul li .team_img,
+  .widget_team_profile ul li .team_info {
+    display: block;
+    vertical-align: top;
+    padding: 15px;
+
+  }
+
+  .widget_team_profile ul li .team_img {
+    width: 100%;
+    padding: 0;
+  }
+  .widget_team_profile ul li .team_img  .img {
+    border: 2px solid rgb(226, 226, 226);
+    border-color: #ff920a;
+    border-radius: 6px;
+    padding: 0px;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-bottom: 65px;
+  }
+
+  .widget_team_profile ul li .team_img  .img > img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  .widget_team_profile ul li .team_info {
+    padding: 15px 0px;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .widget_team_profile ul li .team_info > h3 {
+    font-size: 36px;
+    background: #f5f5f5;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .widget_team_profile ul li .team_info_content,
+  .widget_team_profile ul li .team_info_content .team_row {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+
+  .widget_team_profile ul li .team_info_content .team_row {margin-bottom: 5px;border-bottom: 1px dotted #ccc;padding-bottom: 5px;}
+
+  .team_row ._label, .team_row ._separator, .team_row ._info {
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    text-transform: capitalize;
+    float: left;
+  }
+
+  .team_row ._label {
+    width: 35%;
+    font-weight: bolder;
+  }
+  .team_row ._separator {
+    width: 5%;
+    text-align: center;
+  }
+  .team_row ._info {
+    width: 60%;
+  }
+
+  .widget_team_profile ._infolist {list-style: disc!important; padding-left:  20px!important;}
+  .widget_team_profile ._infolist li {list-style-type: disc!important;display: list-item;margin-bottom: 5px;}
+
+  .team_row.full_row ._label, .team_row.full_row ._separator, .team_row.full_row ._info {
+    width: 100%;
+  }
+
+  .widget_team_profile .nav-slide {top: 150px;}
+  .widget_team_profile .nav-slide .nav-next {
+    right: 60px;
+  }
+
+  .widget_team_profile .nav-slide .nav-next, .widget_team_profile .nav-slide .nav-prev {
+    border: 1px solid #ddd;
+    border-radius: 100%;
+  }
+  .widget_team_profile .nav-slide .nav-next a, .widget_team_profile .nav-slide .nav-prev a {
+    background: transparent;
+    height: 50px;
+    text-align: center;
+    line-height: 32px;
+  }
+  .widget_team_profile .nav-slide .nav-next a:hover, .widget_team_profile .nav-slide .nav-prev a:hover {color: #ff920a;}
+  .widget_team_profile .bx-wrapper .bx-pager {
+    bottom: auto;
+    top: 300px;
+    width: 94%;
+  }
+
+  .content_slide {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 15px auto 35px;
+    padding-bottom: 50px;
+  }
+  .content_slide ul {
+    display: inline-block;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+  }
+
+  .content_slide .bx-wrapper .bx-pager {
+    text-align: center;
+    padding: 13px 15px;
+    height: 50px;
+  }
+  .content_slide .bx-wrapper .bx-pager .bx-pager-item {
+    display: inline-block;
+    margin: 0 5px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 50px;
+  }
+  .content_slide .bx-wrapper .bx-pager .bx-pager-item a {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    text-indent: -5000px;
+    border-radius: 100%;
+    border: 3px solid rgba(239, 107, 0, 0.8);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  }
+
+  .content_slide .bx-wrapper .bx-pager .bx-pager-item a.active {
+
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+    background: rgb(169,3,41); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+  }
+
+
+  /* ----------------------------------- WIDGET TEAM --------------------- */
 
   /*#widget-lpse .lpse-wrap {
     display: table;
