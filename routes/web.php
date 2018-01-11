@@ -67,4 +67,20 @@ Route::post('cekdps', ['as'=>'cari','uses'=>'frontend\CekDptController@checkList
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    Route::group(['as' => 'voyager.'], function () {
+    $mynamespacePrefix = '\\App\\Http\\Controllers\\Voyager\\';
+        Route::group(['middleware' => 'admin.user'], function () use ($mynamespacePrefix) {
+            Route::group([
+                'as'     => 'data-dps.',
+                'prefix' => 'data-pemilu/data-dps',
+            ],function () use ($mynamespacePrefix) {
+                Route::get('/', ['uses' => $mynamespacePrefix.'ElectionVoterController@index','as' => 'index']);
+                Route::get('/{id}', ['uses' => $mynamespacePrefix.'ElectionVoterController@browse', 'as' => 'show' ]);
+                Route::get('/{id}/create', ['uses' => $mynamespacePrefix.'ElectionVoterController@create', 'as' => 'create' ]);
+                Route::get('/{id}/import', ['uses' => $mynamespacePrefix.'ElectionVoterController@import', 'as' => 'import' ]);
+                Route::post('/upload/{id}', ['uses' => $mynamespacePrefix.'ElectionVoterController@upload', 'as' => 'upload' ]);
+            });
+        });
+    });
 });
