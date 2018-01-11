@@ -52,6 +52,8 @@ $(document).ready(function() {
 	SetHArticles();
 	SetHlpse();
 	SetHGallery();
+	teamSlider();
+	contentSlider();
 });
 
 function mainSlider(){
@@ -156,4 +158,47 @@ function SetHGallery() {
 	}
 
 	$('#block-gallery > .gallery_cover > li').height(tempg);
+}
+
+function teamSlider() {
+	var vcontent = $('.widget_team_profile');
+	if (vcontent.length > 0) {
+		$('.widget_team_profile > ul').bxSlider({
+			nextSelector: '.nav-next._2nd',
+			prevSelector: '.nav-prev._2nd',
+			prevText: '<i class="fa fa-chevron-left"></i>',
+			nextText: '<i class="fa fa-chevron-right"></i>',
+			slideWidth: 2000,
+			minSlides: 1,
+			maxSlides: 1,
+			moveSlides: 1,
+			auto: false,
+			pause: 6000,
+			speed: 300,
+			infiniteLoop: true,
+			pager: true,
+			mode: 'fade'
+		});
+	}
+}
+
+function contentSlider() {
+	var vcontent = $('.content_slide');
+	if (vcontent.length > 0) {
+		$('.content_slide > ul').bxSlider({
+			nextSelector: '.nav-next._3rd',
+			prevSelector: '.nav-prev._3rd',
+			prevText: '<i class="fa fa-chevron-left"></i>',
+			nextText: '<i class="fa fa-chevron-right"></i>',
+			slideWidth: 2000,
+			minSlides: 1,
+			maxSlides: 1,
+			mode: 'fade',
+			auto: true,
+			pause: 6000,
+			speed: 1000,
+			infiniteLoop: true,
+			pager: true
+		});
+	}
 }
