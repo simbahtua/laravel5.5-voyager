@@ -101,10 +101,10 @@
                 var par = $("#slider-value");
                 if(selected == 'video') {                
                     $("#slider_title").html('URL');
-                    var new_element = '<input id="value" type="text" class="form-control" name="url" placeholder="URL" required="required" value="'+lastValue+'"/>';
+                    var new_element = '<input id="value" type="text" class="form-control" name="value" placeholder="URL" required="required" value="'+lastValue+'"/>';
                 } else if(selected == 'image') {
                     $("#slider_title").html('Upload File');
-                    var new_element = '<input id="value" type="file" class="form-control" name="file" placeholder="FILE" required value="@if(isset($dataTypeContent->value)){{ $dataTypeContent->value }}@endif"/>';
+                    var new_element = '<input id="value" type="file" class="form-control" name="value" placeholder="FILE" required value="@if(isset($dataTypeContent->value)){{ $dataTypeContent->value }}@endif"/>';
                     
                 }
                 $("#slider-value").append(new_element);
