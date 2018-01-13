@@ -52,7 +52,7 @@
 
                             <div class="form-group">
                                 <label for="name">Title</label>
-                                <input type="text" class="form-control" name="title" placeholder="Judul" required value="@if(isset($dataTypeContent->title)){{ $dataTypeContent->title }}@endif"/>
+                                <input type="text" style=" text-transform: uppercase;" class="form-control" name="title" placeholder="Judul" required value="@if(isset($dataTypeContent->title)){{ $dataTypeContent->title }}@endif"/>
                             </div>
 
                             <div class="form-group">
