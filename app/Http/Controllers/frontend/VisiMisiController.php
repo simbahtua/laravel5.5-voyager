@@ -14,6 +14,8 @@ class VisiMisiController extends Controller {
         $data ['visimisi'] = DB::table('data_visions')
                 ->orderBy('id', 'desc')
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         return \View::make('frontend.home.visi_misi', $data);
     }

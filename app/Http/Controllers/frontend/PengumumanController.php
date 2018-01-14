@@ -26,6 +26,8 @@ class PengumumanController extends Controller {
                 ->limit('5')
                 ->inRandomOrder()
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         return \View::make('frontend.home.list_pengumuman', $data);
     }
@@ -49,6 +51,8 @@ class PengumumanController extends Controller {
                 ->limit('5')
                 ->inRandomOrder()
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         return \View::make('frontend.home.detail_pengumuman', $data);
     }

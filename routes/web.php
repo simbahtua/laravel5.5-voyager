@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.landingpage ');
-});
+//Route::get('/', function () {
+//    return view('frontend.landingpage ');
+//});
+
+//Route::get('/', function () {
+//    return view('frontend.landingpage ');
+//});
+
+Route::get('/','frontend\LandingPageController@index');
 
 Route::get('home','frontend\HomeController@index');
 Route::get('page','frontend\PageController@index');

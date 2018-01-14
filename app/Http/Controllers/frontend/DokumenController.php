@@ -17,6 +17,8 @@ class DokumenController extends Controller
                 ->orderBy('id', 'desc')
                 ->paginate(10);
         
+        $data['kontak'] = DB::table('app_contacts')->first();
+        
         return \View::make('frontend.home.list_dokumen', $data);
     }
     

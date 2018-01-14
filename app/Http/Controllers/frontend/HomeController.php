@@ -92,6 +92,8 @@ class HomeController extends Controller {
                 ->orderBy('id', 'desc')
                 ->get();
 
+        $data['kontak'] = DB::table('app_contacts')->first();
+
         return \View::make('frontend.home.index', $data);
     }
 

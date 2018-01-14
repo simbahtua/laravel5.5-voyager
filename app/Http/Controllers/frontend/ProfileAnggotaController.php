@@ -12,6 +12,8 @@ class ProfileAnggotaController extends Controller
         $data ['profile'] = DB::table('data_commisioners')                
                 ->orderBy('id', 'desc')
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         return \View::make('frontend.home.profile_anggota', $data);
     }

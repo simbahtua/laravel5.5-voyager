@@ -15,6 +15,8 @@ class SejarahkpuController extends Controller {
         $data ['sejarahpemilu'] = DB::table('data_sejarah_pemilus')                
                 ->orderBy('id', 'desc')
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
 
         return \View::make('frontend.home.sejarahkpu', $data);

@@ -40,6 +40,8 @@ class AgendaController extends Controller {
                 ->where('app_agendas.id', $id)
                 ->orderBy('id', 'desc')
                 ->first();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
 //         $data ['agenda'] = DB::table('app_agendas')
 //                ->join('users', 'users.id', '=', 'author_id')

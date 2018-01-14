@@ -29,6 +29,8 @@ class ArtikelController extends Controller {
                 ->limit('5')
                 ->inRandomOrder()
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         return \View::make('frontend.home.list_artikel', $data);
     }
@@ -52,6 +54,8 @@ class ArtikelController extends Controller {
                 ->limit('5')
                 ->inRandomOrder()
                 ->get();
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         return \View::make('frontend.home.detail_artikel', $data);
     }

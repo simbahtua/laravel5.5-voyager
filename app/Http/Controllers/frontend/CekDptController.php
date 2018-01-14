@@ -20,6 +20,8 @@ class CekDptController extends Controller
                 $listpemilu[$row->id] = $row->nama;
             endforeach;
         }
+        
+        $data['kontak'] = DB::table('app_contacts')->first();
 
         $data['pemilu'] = $listpemilu;
         return View('frontend.home.cekdpt', $data);
