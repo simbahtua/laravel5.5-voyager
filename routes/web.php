@@ -36,6 +36,12 @@ Route::get('/detail_berita/{id}', [
   'as'   => 'detail_berita'
 ]);
 
+Route::get('list_pilkada','frontend\PilkadaController@index');
+Route::get('/detail_pilkada/{id}', [
+  'uses' => 'frontend\PilkadaController@detail',
+  'as'   => 'detail_pilkada'
+]);
+
 Route::get('list_artikel','frontend\ArtikelController@index');
 Route::get('/detail_artikel/{id}', [
   'uses' => 'frontend\ArtikelController@detail',

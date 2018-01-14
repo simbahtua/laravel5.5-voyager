@@ -7,23 +7,23 @@ use Illuminate\Http\Request;
 use DB;
 Use View;
 
-class BeritaController extends Controller {
+class PilkadaController extends Controller {
 
     function index() {
-        $data['page_title'] ='Berita';
+        $data['page_title'] ='Info Pilkada';
         
         $data ['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-                ->where('category_id', '2')
+                ->where('category_id', '4')
                 ->where('STATUS', 'PUBLISHED')
                 ->orderBy('id', 'desc')
                 ->paginate(5);
         
-         $data ['berita_random'] = DB::table('posts')
+         $data ['pilkada_random'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-                ->where('category_id', '2')
+                ->where('category_id', '4')
                 ->where('STATUS', 'PUBLISHED')
                 ->limit('5')
                 ->inRandomOrder()
@@ -31,17 +31,17 @@ class BeritaController extends Controller {
          
          $data['kontak'] = DB::table('app_contacts')->first();
 
-        return \View::make('frontend.home.list_berita', $data);
+        return \View::make('frontend.home.list_pilkada', $data);
     }
 
     function detail($id) {  
-        $data['page_title'] ='Detail Berita';
+        $data['page_title'] ='Detail Info Pilkada';
         
         //Berita random
-        $data ['berita_random'] = DB::table('posts')
+        $data ['pilkada_random'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-                ->where('category_id', '2')
+                ->where('category_id', '4')
                 ->where('STATUS', 'PUBLISHED')
                 ->limit('5')
                 ->inRandomOrder()
@@ -50,14 +50,14 @@ class BeritaController extends Controller {
         $data['data'] = DB::table('posts')
                 ->join('users', 'users.id', '=', 'author_id')
                 ->select('posts.*', 'name')
-                ->where('posts.category_id', '2')
+                ->where('posts.category_id', '4')
                 ->where('posts.id', $id)
                 ->where('STATUS', 'PUBLISHED')
                 ->first();
         
         $data['kontak'] = DB::table('app_contacts')->first();
 
-        return \View::make('frontend.home.detail_berita', $data);
+        return \View::make('frontend.home.detail_pilkada', $data);
     }
 
 }
