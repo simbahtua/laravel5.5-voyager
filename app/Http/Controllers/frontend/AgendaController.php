@@ -28,6 +28,8 @@ class AgendaController extends Controller {
                 ->inRandomOrder()
                 ->get();
 
+                $data['kontak'] = DB::table('app_contacts')->first();
+
         return \View::make('frontend.home.list_agenda', $data);
     }
 
