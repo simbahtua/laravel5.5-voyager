@@ -1,5 +1,8 @@
 @extends('frontend.home.app')
 @section('content')
+<style type="text/css">
+ 
+</style>
 <div class="page_header_wrap" style="background: url(<?php echo e(asset('web/images/bg-header.jpg')); ?>) center -25px no-repeat">
     <div class="container">
         <h2 class="page_category">{{ $page_title }} </h2>
@@ -43,6 +46,27 @@
                             <p> {!! $data->body !!}</p>
                         </div>
                     </div>
+                    <div id="share-buttons">
+                                <hr>
+                                Bagikan Jika Bermanfaat :) :
+
+                                    <!-- Facebook -->
+                                    <a href="http://www.facebook.com/sharer.php?u={{route('detail_berita', [$data->id])}}" target="_blank">
+                                        <img src="<?php echo e(asset('web/images/facebook.png')); ?>" alt="Facebook" />
+                                    </a>
+                                    
+                                    <!-- Google+ -->
+                                    <a href="https://plus.google.com/share?url={{route('detail_berita', [$data->id])}}" target="_blank">
+                                        <img src="<?php echo e(asset('web/images/google.png')); ?>" alt="Google" />
+                                    </a>
+                                  
+                                    <!-- Twitter -->
+                                    <a href="https://twitter.com/share?url={{route('detail_berita', [$data->id])}}" target="_blank">
+                                        <img src="<?php echo e(asset('web/images/twitter.png')); ?>" alt="Twitter" />
+                                    </a>
+                                    <hr>
+
+                                </div>
                 </div>
 
                 <!-- sidebar -->

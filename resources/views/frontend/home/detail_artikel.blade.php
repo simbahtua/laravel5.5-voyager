@@ -44,6 +44,29 @@
                             <p> {!! $data->body !!}</p>
                         </div>
                     </div>
+                    
+                    <div id="share-buttons">
+                                <hr>
+                                Bagikan Jika Bermanfaat :) :
+
+                                    <!-- Facebook -->
+                                    <a href="http://www.facebook.com/sharer.php?u={{route('detail_artikel', [$data->id])}}" target="_blank">
+                                        <img src="<?php echo e(asset('web/images/facebook.png')); ?>" alt="Facebook" />
+                                    </a>
+                                    
+                                    <!-- Google+ -->
+                                    <a href="https://plus.google.com/share?url={{route('detail_artikel', [$data->id])}}" target="_blank">
+                                        <img src="<?php echo e(asset('web/images/google.png')); ?>" alt="Google" />
+                                    </a>
+                                  
+                                    <!-- Twitter -->
+                                    <a href="https://twitter.com/share?url={{route('detail_artikel', [$data->id])}}" target="_blank">
+                                        <img src="<?php echo e(asset('web/images/twitter.png')); ?>" alt="Twitter" />
+                                    </a>
+                                    <hr>
+
+                                </div>
+
                 </div>
 
                 <!-- sidebar -->
