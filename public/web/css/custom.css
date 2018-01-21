@@ -1041,7 +1041,7 @@
   .slide-container .bx-wrapper .bx-pager {
     text-align: center;
     padding: 13px 15px;
-    height: 75px;
+    height: 50px;
   }
   .slide-container .bx-wrapper .bx-pager .bx-pager-item {
     display: inline-block;
@@ -2084,6 +2084,7 @@
     position: relative;
     width: 100%;
     z-index: 100;
+    display: none;
   }
 
   .panel-content {
@@ -2240,6 +2241,8 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    max-height: 130px;
+    border: 1px solid #999;
   }
   .post-list .list-content .list-post-data {
     display: table-cell;
