@@ -20,22 +20,27 @@ class ContactUsController extends VController
 
 
 
-	function store(Request $request) {
-		if ($request->isMethod('post')) {
-    		cModel::create($request->all());
-		}
+	function store(Request $request) {		
+    	cModel::create($request->all());
+    	
+		$data = array (
+				'message'    => 'Data Berhasil Disimpan',
+				'alert-type' => 'success');
+			return \Redirect::route('voyager.contact-us.index')
+			->with($data);
+	}
 
-		if ($request->isMethod('put')) {
-			// $data = cModel::orderBy('created_at', 'desc')->first();
-    		cModel::where('id', $request->input('id'))->update(array(
-    			'alamat' => $request->input('alamat'),
-    			'phone' => $request->input('phone'),
-    			'instagram' => $request->input('instagram'),
-    			'facebook' => $request->input('facebook'),
-    			'twitter' => $request->input('twitter'),
-    			'description' => $request->input('description'),
-    		));
-		}
+	function update(Request $request) {
+		$id = $request['id'];
+
+		$contact = cModel::findOrFail($id);
+		$contact->instagram = $request['alamat'];
+		$contact->facebook = $request['facebook'];
+		$contact->twitter = $request['twitter'];
+		$contact->instagram = $request['instagram'];
+		$contact->phone = $request['phone'];
+		$contact->email = $request['email'];
+		$contact->save();
 
 		$data = array (
 				'message'    => 'Data Berhasil Disimpan',

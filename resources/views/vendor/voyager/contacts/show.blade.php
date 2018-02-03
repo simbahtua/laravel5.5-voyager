@@ -17,7 +17,9 @@
 		<div class="col-md-12">
 
 			<div class="panel panel-bordered table-striped">
-				<form role="form" class="form-edit-add" action="{{ route('voyager.contact-us.store') }}" method="POST" enctype="multipart/form-data">
+				<form action="@if(isset($data->id)){{ route('voyager.contact-us.update') }}@else{{ route('voyager.contact-us.store') }}@endif"
+                      method="POST" role="form">
+				
 					@if(isset($data->id))
 					{{ method_field("PUT") }}
 					@endif
@@ -70,12 +72,20 @@
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-12">
 								<div class="form-group">
+									{!! Form::label('email','EMAIL',['class'=>'col-md-3']) !!}
+									<div class="col-md-9">
+										<input type="text" name="email" value="@if(isset($data->email)){{ $data->email }}@endif" class="form-control" />
+									</div>
+								</div>
+							</div>
+							<!-- <div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="form-group">
 									{!! Form::label('description','INFORMASI TAMBAHAN',['class'=>'col-md-3']) !!}
 									<div class="col-md-9">
 										<textarea class="form-control richTextBox" id="richtextbody" name="description" style="border:0px;">@if(isset($data->description)){{ $data->description }}@endif</textarea>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
