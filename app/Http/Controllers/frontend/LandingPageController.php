@@ -14,6 +14,7 @@ class LandingPageController extends Controller {
     function index() {
         $data ['slider'] = DB::table('app_home_sliders')
                 ->orderBy('order', 'asc')
+                ->limit('5')
                 ->get();
         
         return \View::make('frontend.landingpage', $data);
