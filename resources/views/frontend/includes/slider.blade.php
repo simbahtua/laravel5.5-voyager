@@ -24,8 +24,10 @@
                     
                     @if(!empty($slider))
                     @foreach ($slider as $row_menu) 
-                    
-                    <a data-slide-index="{{ $row_menu->id }}"  href="#">{{ $row_menu->title }}</a>
+                    @php
+                    $index_id = $row_menu->order - 1;
+                    @endphp
+                    <a data-slide-index="{{ $index_id }}"  href="#">{{ $row_menu->title }}</a>
                     
                     
 
