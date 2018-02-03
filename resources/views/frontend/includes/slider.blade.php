@@ -10,6 +10,11 @@
                     <li>
                         <iframe width="100%" height="100%" src="" data-video="{{ $row->value }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     </li>
+                    } @else {
+                    
+                    <li>
+                       <li><img src="<?php echo e(asset('storage/')); ?>/{{$row->image}}" alt="{{ $row_menu->title }}"></li>
+                    </li>
                     }
                     @endif
                     @endforeach
