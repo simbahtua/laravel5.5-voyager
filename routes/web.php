@@ -67,7 +67,7 @@ Route::get('list_agenda','frontend\AgendaController@index');
 Route::get('hukum','frontend\HukumController@index');
 Route::get('list_pengumuman','frontend\PengumumanController@index');
 Route::get('profile_anggota','frontend\ProfileAnggotaController@index');
-Route::get('profile_seketariat','frontend\ProfileSeketariatController@index');
+// Route::get('profile_seketariat','frontend\ProfileSeketariatController@index');
 Route::get('visi_misi','frontend\VisiMisiController@index');
 
 Route::get('list_gallery','frontend\GalleryController@index');
@@ -92,6 +92,28 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::get('/{id}/create', ['uses' => $mynamespacePrefix.'ElectionVoterController@create', 'as' => 'create' ]);
                 Route::get('/{id}/import', ['uses' => $mynamespacePrefix.'ElectionVoterController@import', 'as' => 'import' ]);
                 Route::post('/upload/{id}', ['uses' => $mynamespacePrefix.'ElectionVoterController@upload', 'as' => 'upload' ]);
+            });
+
+            Route::group([
+                'as'     => 'contact-us.',
+                'prefix' => 'contact-us',
+            ],function () use ($mynamespacePrefix) {
+                Route::get('/', ['uses' => $mynamespacePrefix.'ContactUsController@index','as' => 'index']);
+                Route::post('/', ['uses' => $mynamespacePrefix.'ContactUsController@store','as' => 'store']);
+                Route::put('/', ['uses' => $mynamespacePrefix.'ContactUsController@update','as' => 'update']);
+
+            });
+
+            Route::group([
+              'as'  => 'slider-home.',
+              'prefix'  => 'slider-home',
+            ],function() use ($mynamespacePrefix) {
+              // Route::get('add',['uses' => $mynamespacePrefix.'HomeSliderController@add','as' => 'add']);
+              Route::get('/',['uses' => $mynamespacePrefix.'SliderHome@index','as' => 'index']);
+              Route::get('/create',['uses' => $mynamespacePrefix.'SliderHome@create','as' => 'create']);
+              Route::post('/create',['uses' => $mynamespacePrefix.'SliderHome@store','as' => 'store']);
+              Route::delete('{id}', ['uses' => $mynamespacePrefix.'SliderHome@delete', 'as' => 'destroy']);
+              Route::post('order', ['uses' => $mynamespacePrefix.'SliderHome@order_item', 'as' => 'order']);
             });
         });
     });

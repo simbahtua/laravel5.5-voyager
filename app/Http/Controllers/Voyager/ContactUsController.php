@@ -13,16 +13,13 @@ use App\Models\voyager\AppContact as cModel;
 
 class ContactUsController extends VController
 {
-	function index(Request $request) {		
+	function index(Request $request) {
 		$data = cModel::orderBy('created_at', 'desc')->first();
-		return Voyager::view('voyager::contacts.show',compact('data'));	
+		return Voyager::view('voyager::contacts.show',compact('data'));
 	}
-
-
-
-	function store(Request $request) {		
+	function store(Request $request) {
     	cModel::create($request->all());
-    	
+
 		$data = array (
 				'message'    => 'Data Berhasil Disimpan',
 				'alert-type' => 'success');
