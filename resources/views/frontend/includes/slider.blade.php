@@ -6,31 +6,26 @@
                 <ul class="main-bxslider">
                     @if(!empty($slider))
                     @foreach ($slider as $row) 
-                    @if($row->type == 'video'){
+                    @if($row->type == 'video')
                     <li>
                         <iframe width="100%" height="100%" src="" data-video="{{ $row->value }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     </li>
-                    } @else{
-                       <li><img src="uploads/slide/slider_03.jpg" alt="Komisi Pemilihan Umum Kabupaten Bantaeng"></li>     
-                        }
+                @else
+                    <li><img src="<?php echo e(asset('storage/')); ?>/{{$row->value}}" alt="{{ $row->title }}"></li>
                     @endif
                     @endforeach
-                    @else 
-                    <div class="alert alert-info">
-                        Data Belum Ada 
-                    </div>
                     @endif
 
                 </ul>
+
                 <div id="bx-pagers" class="slider-nav">
-                    
-                    @if(!empty($slider))
+                        @if(!empty($slider))
                     @foreach ($slider as $row_menu) 
                     @php
                     $index_id = $row_menu->order - 1;
+                    $title = strtoupper($row_menu->title);
                     @endphp
-                    <a data-slide-index="{{ $index_id }}"  href="#">{{ $row_menu->title }}</a>
-                    
+                    <a data-slide-index="{{ $index_id }}"  href="#">{{ $title }}</a>
                     
 
                     @endforeach
@@ -39,12 +34,11 @@
                         Data Belum Ada 
                     </div>
                     @endif
-                    
-                    
-                </div>
-            </div>
+
         </div>
     </div>
+</div>
+</div>
 </div>
 
 <ul style="list-style: none;">
